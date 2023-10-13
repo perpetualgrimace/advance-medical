@@ -1,4 +1,4 @@
-<?
+<?php
 
 // check for optional variables passed from template
 if(isset($layout)) { $layout = $layout; } else { $layout = 'g-9'; }
@@ -12,9 +12,9 @@ $children = $page->children()->visible();
   <?= $page->text()->kirbytext() ?>
 
   <ul class="teaser-list u-margin-top-lg">
-    <? foreach ($children as $child): ?>
-      <? pattern('teaser', ['item' => $child]) ?>
-    <? endforeach ?>
+    <?php foreach ($children as $child): ?>
+      <?php pattern('teaser', ['item' => $child]) ?>
+    <?php endforeach ?>
   </ul>
 
 </article>

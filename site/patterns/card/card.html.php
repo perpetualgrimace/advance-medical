@@ -1,4 +1,4 @@
-<?
+<?php
 
   // determine card type
   $contentType = $item->intendedTemplate();
@@ -52,13 +52,13 @@
 <article class="<?= $contentType ?>-card-container card-container g-col <?= $cardLayout ?>" data-category="<?= $categorySanitized ?>" data-type="<?= $contentType ?>">
   <div class="<?= $contentType ?>-card-inner card-inner">
 
-    <? if ($thumbImg != $placeholderUrl): ?>
+    <?php if ($thumbImg != $placeholderUrl): ?>
       <a href="<?= $item->url() ?>" class="<?= $contentType ?>-card-thumb card-thumb" tabindex="-1">
         <img class="<?= $contentType ?>-card-img card-img" data-src="<?= $thumbImg ?>" alt="" draggable="false">
         <noscript>
           <img class="<?= $contentType ?>-card-img card-img" src="<?= $thumbImg ?>" alt="" draggable="false">
         </noscript>
-          <? if ($contentType == 'blog-video') {
+          <?php if ($contentType == 'blog-video') {
             snippet('retina-img', [
               'baseUrl' => $site->url() . '/assets/img/icons/',
               'filename' => 'play',
@@ -66,23 +66,23 @@
             ]);
           } ?>
       </a>
-    <? endif ?>
+    <?php endif ?>
 
     <div class="<?= $contentType ?>-card-caption card-caption u-margin-top-off">
        <a class="<?= $contentType ?>-card-title card-title display u-left" href="<?= $item->url() ?>">
-         <? // if ($contentType != 'blog-video') {
+         <?php // if ($contentType != 'blog-video') {
             snippet('svg-img', [
               'filename' => 'icons/' . $contentType,
               'class' => 'card-icon'
             ]);
           // } ?> <?= $item->title() ?>
        </a>
-       <? if ($category != NULL): ?>
-        <p class="<?= $contentType ?>-card-meta card-meta milli">Posted in <a href="<? e($page->intendedTemplate() != 'blog-list', $site->url() . '/blog') ?>#<?= $categorySanitized ?>" class="card-link card-meta-link" tabindex="-1" data-category-trigger><?= $category ?></a></p>
-      <? endif ?>
-      <? if ($thumbImg == $placeholderUrl): ?>
+       <?php if ($category != NULL): ?>
+        <p class="<?= $contentType ?>-card-meta card-meta milli">Posted in <a href="<?php e($page->intendedTemplate() != 'blog-list', $site->url() . '/blog') ?>#<?= $categorySanitized ?>" class="card-link card-meta-link" tabindex="-1" data-category-trigger><?= $category ?></a></p>
+      <?php endif ?>
+      <?php if ($thumbImg == $placeholderUrl): ?>
         <a href="<?= $item->url() ?>" class="<?= $contentType ?>-card-link card-link card-more-link milli" tabindex="-1">View post &rsaquo;</a>
-      <? endif; ?>
+      <?php endif; ?>
     </div>
 
   </div>

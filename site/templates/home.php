@@ -1,4 +1,4 @@
-<?
+<?php
 
 // define content types
 $articles = $pages->find('blog')->children()->visible()->filterBy('template', 'blog-article');

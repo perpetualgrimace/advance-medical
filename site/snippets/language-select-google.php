@@ -1,8 +1,8 @@
 <div id="google_translate_element" class="language-container google-language-container">
 
-  <? snippet('svg-img', array('filename' => 'icons/globe', 'class' => 'language-globe-img google-language-globe-img')); ?>
+  <?php snippet('svg-img', array('filename' => 'icons/globe', 'class' => 'language-globe-img google-language-globe-img')); ?>
 
-  <? snippet('svg-img', array('filename' => 'icons/dropdown', 'class' => 'language-dropdown-img google-language-dropdown-img')); ?>
+  <?php snippet('svg-img', array('filename' => 'icons/dropdown', 'class' => 'language-dropdown-img google-language-dropdown-img')); ?>
 
 </div>
 

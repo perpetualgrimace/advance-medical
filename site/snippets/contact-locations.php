@@ -4,7 +4,7 @@
 
   <div class="small-columns u-margin-top">
 
-  <?
+  <?php
 
   $continents = ['NA', 'SA', 'Africa', 'Oceana', 'WE', 'CE', 'Asia'];
 
@@ -39,7 +39,7 @@
 
         <ul class="contact-list bullets u-line-height-tight">
 
-        <? foreach ($locations as $location):
+        <?php foreach ($locations as $location):
           $locationName = $location['city'] . ', ' . $location['country'];
           $locationLink = 'location-' . sanitize($location['city']);
 
@@ -51,12 +51,12 @@
             </a>
           </li>
 
-        <? endforeach ?>
+        <?php endforeach ?>
 
         </ul>
       </div>
 
-    <? endif;
+    <?php endif;
   endforeach; ?>
   </div>
 </div>

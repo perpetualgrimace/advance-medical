@@ -1,4 +1,4 @@
-<?
+<?php
 
 // get hours
 if($item->hours() != '') {
@@ -44,18 +44,18 @@ if($cardLayout != '') {
         <?= $item->position() ?>
       </a>
       <ul class="career-card-meta-list card-meta milli u-margin-top-sm inline-list">
-      <? if ($location != NULL): ?>
+      <?php if ($location != NULL): ?>
         <li class="career-card-meta-item card-meta-item">
-          <? snippet('svg-img', ['filename' => 'icons/location-gray', 'class' => 'career-card-icon career-card-icon-location']) ?>
+          <?php snippet('svg-img', ['filename' => 'icons/location-gray', 'class' => 'career-card-icon career-card-icon-location']) ?>
           <span class="u-screenreader">Location: </span><?= $location ?>
         </li>
-      <? endif ?>
-      <? if ($hours != NULL): ?>
+      <?php endif ?>
+      <?php if ($hours != NULL): ?>
         <li class="career-card-meta-item card-meta-item">
-          <? snippet('svg-img', ['filename' => 'icons/time-gray', 'class' => 'career-card-icon career-card-icon-hours']) ?>
+          <?php snippet('svg-img', ['filename' => 'icons/time-gray', 'class' => 'career-card-icon career-card-icon-hours']) ?>
           <span class="u-screenreader">Hours: </span><?= $hours ?>
         </li>
-      <? endif ?>
+      <?php endif ?>
     </ul>
       <a href="<?= $item->url() ?>" class="career-card-link card-link card-more-link milli" tabindex="-1"><?= $pages->find('careers')->moreLink() ?> &rsaquo;</a>
     </div>

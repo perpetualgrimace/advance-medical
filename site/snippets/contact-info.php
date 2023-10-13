@@ -1,6 +1,6 @@
 <h2 class="u-screenreader"><?= $page->infoHeading() ?></h2>
 
-<?
+<?php
 
 $continents = ['NA', 'SA', 'Africa', 'Oceana', 'WE', 'CE', 'Asia'];
 
@@ -50,7 +50,7 @@ foreach($continents as $continent):
       <div class="g-columns u-margin-top-sm">
         <div class="g-col u-full-height">
 
-        <?
+        <?php
 
         foreach ($infos as $info) {
           pattern('contact-info', [
@@ -70,5 +70,5 @@ foreach($continents as $continent):
     </div><!-- g-columns (cities) -->
   </div><!-- g-col (continent) -->
 
-  <? endif; // location > 0 ?>
-<? endforeach; // continents ?>
+  <?php endif; // location > 0 ?>
+<?php endforeach; // continents ?>

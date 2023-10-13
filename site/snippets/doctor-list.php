@@ -1,4 +1,4 @@
-<?
+<?php
 
 // define physicians and experts
 $physicians = $pages->find('testimonials/physician')->children()->filterBy('img', '!=', '')->shuffle();

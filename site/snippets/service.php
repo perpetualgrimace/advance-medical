@@ -1,4 +1,4 @@
-<?
+<?php
 
 // check for optional variables passed from template
 if(isset($layout)) { $layout = $layout; } else { $layout = 'g-9'; }
@@ -14,17 +14,17 @@ $categories = $page->categories()->toStructure();
 
   <?= $text ?>
 
-  <? if ($processes != '') {
+  <?php if ($processes != '') {
     foreach ($processes as $process) {
       pattern ('service-process', ['process' => $process]);
     }
   } ?>
 
-  <? if ($categories != '') {
+  <?php if ($categories != '') {
     foreach ($categories as $category): ?>
       <h3 class="gamma u-margin-top-lg"><?= $category->title() ?></h3>
       <p class="delta u-margin-top-off"><?= $category->caption() ?></p>
-    <? endforeach;
+    <?php endforeach;
   } ?>
 
 </article>

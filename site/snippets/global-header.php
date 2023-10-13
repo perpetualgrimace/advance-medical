@@ -1,4 +1,4 @@
-<?
+<?php
 //set headline
 if (isset($query)) { $headline = 'Your search for &lsquo;' . $query . '&rsquo; returned the following results:'; }
 elseif($page->headline() != '') { $headline = $page->headline(); }
@@ -14,17 +14,17 @@ $breadcrumbs = $site->breadcrumb();
     <div class="g-col">
       <h1 class="header-headline display"><?= $headline ?></h1>
 
-      <? if ($page->subtitle() != ''): ?>
+      <?php if ($page->subtitle() != ''): ?>
         <h2 class="header-subtitle delta"><?= $page->subtitle() ?></h2>
-      <? endif ?>
+      <?php endif ?>
 
     </div>
 
 
   </div>
 
-  <? pattern('breadcrumbs') ?>
-  <? snippet('global-header-hero') ?>
-  <? snippet('global-header-graphic') ?>
+  <?php pattern('breadcrumbs') ?>
+  <?php snippet('global-header-hero') ?>
+  <?php snippet('global-header-graphic') ?>
 
 </header>

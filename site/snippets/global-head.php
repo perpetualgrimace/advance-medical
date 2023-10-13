@@ -11,7 +11,7 @@
 
   <title><?= $site->title() ?> | <?= $page->title() ?></title>
 
-  <?
+  <?php
 
   // meta text and image for linking and sharing
   snippet('global-head-seo');

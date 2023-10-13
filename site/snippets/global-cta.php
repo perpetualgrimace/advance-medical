@@ -1,4 +1,4 @@
-<?
+<?php
 
 // check for optional variables passed from template
 if(isset($layout)) { $layout = $layout; } else { $layout = 'g-12'; }
@@ -13,9 +13,9 @@ if (isset($class)) { $class = $class; } else { $class = NULL; }
 <div class="section cta <?= $class ?>">
   <div class="g-col <?= $layout ?> u-margins-auto u-padding-bottom-sm u-padding-top-off u-center">
     <h2 class="display alpha u-margin-bottom"><?= $cta ?></h2>
-    <? if ($ctaText != NULL): ?>
+    <?php if ($ctaText != NULL): ?>
       <p class="g-8 u-margins-auto"><?= $ctaText ?></p>
-    <? endif ?>
+    <?php endif ?>
     <p>
       <a class="button u-margin-bottom" href="<?= $pages->find($ctaLink)->url() ?>">
         <?= $ctaButton ?>

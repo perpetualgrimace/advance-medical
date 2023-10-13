@@ -1,4 +1,4 @@
-<?
+<?php
 
   // get doctor name
   if(isset($name)) {

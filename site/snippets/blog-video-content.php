@@ -1,4 +1,4 @@
-<?
+<?php
 
 // check for optional variables passed from template
 if(isset($layout)) { $layout = $layout; } else { $layout = 'g-8'; }

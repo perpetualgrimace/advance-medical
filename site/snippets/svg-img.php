@@ -1,4 +1,4 @@
-<?
+<?php
 // check for variables passed from template
 if (isset($class)) { $class = $class; } else { $class = NULL; }
 if (isset($filename)) { $filename = $filename; } else { $filename = NULL; }

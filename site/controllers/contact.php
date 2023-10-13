@@ -1,4 +1,4 @@
-<?
+<?php
 // configure form
 /*
 return function($site, $pages, $page) {

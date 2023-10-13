@@ -1,4 +1,4 @@
-<?
+<?php
 
 $limit = 2;
 
@@ -29,10 +29,10 @@ if ($category != '' && $relatedCount >= 1):
     <h2 class="display beta u-margin-bottom u-center"><?= ktStrip($page->parent()->ctaHeading()) ?></h2>
   </div>
 
-  <? foreach ($relatedPages as $relatedPage):
+  <?php foreach ($relatedPages as $relatedPage):
     pattern('card', array('item' => $relatedPage, 'cardLayout' => $cardLayout));
   endforeach; ?>
 
 </div>
 
-<? endif ?>
+<?php endif ?>

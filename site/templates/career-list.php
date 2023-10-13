@@ -1,4 +1,4 @@
-<?
+<?php
 
 snippet('global-head');
 snippet('global-body-open');

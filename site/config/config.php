@@ -1,4 +1,4 @@
-<?
+<?php
 
 // license
 c::set('license', 'K2-PRO-b1832ccc9f5adac41996b0df3e03ef51');

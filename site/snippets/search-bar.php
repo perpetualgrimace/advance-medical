@@ -1,4 +1,4 @@
-<?
+<?php
 
 // set search scope
 if (isset($searchTarget)) {
@@ -23,7 +23,7 @@ $searchButton = $pages->find('search')->searchButton();
 
 <form class="search append-button" method="get" action="<?= $searchUrl ?>">
 
-  <? snippet('svg-img', ['filename' => 'icons/search', 'class' => 'search-icon']) ?>
+  <?php snippet('svg-img', ['filename' => 'icons/search', 'class' => 'search-icon']) ?>
 
   <input id="search" class="search-input milli" type="search" name="q" placeholder="<?= $searchPlaceholder ?>">
 

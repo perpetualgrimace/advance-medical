@@ -4,12 +4,12 @@
 
       <!-- follow -->
       <div class="footer-contact g-col g-6 u-margin-top milli u-center">
-        <? snippet('global-footer-follow') ?>
+        <?php snippet('global-footer-follow') ?>
       </div>
 
       <!-- navigation -->
       <div class="footer-nav g-col g-6 milli u-margin-top u-left-center">
-        <? snippet('global-footer-nav') ?>
+        <?php snippet('global-footer-nav') ?>
       </div>
 
     </div>
@@ -17,8 +17,8 @@
 
       <!-- copyright -->
       <div class="footer-copyright g-col milli u-center">
-        <? snippet('global-footer-subnav') ?>
-        <? snippet('global-footer-copyright') ?>
+        <?php snippet('global-footer-subnav') ?>
+        <?php snippet('global-footer-copyright') ?>
       </div>
 
     </div>

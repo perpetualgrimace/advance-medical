@@ -1,4 +1,4 @@
-<?
+<?php
 
 // the next page will be the previous article,
 // unless there are no older articles, in which case it will be the latest article
@@ -29,12 +29,12 @@ $cardLayout = 'g-6';
 
   <div class="nextprev-prev g-col <?= $cardLayout ?> u-left-center">
     <p class="display">Previous post: </p>
-    <? pattern('card', ['item' => $prev]); ?>
+    <?php pattern('card', ['item' => $prev]); ?>
   </div>
 
   <div class="nextprev-next g-col <?= $cardLayout ?> u-left-center">
     <p class="display">Next post: </p>
-    <? pattern('card', ['item' => $next]); ?>
+    <?php pattern('card', ['item' => $next]); ?>
   </div>
 
 </section>

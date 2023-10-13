@@ -1,4 +1,4 @@
-<?
+<?php
 //set headline
 if($page->position() != '') { $headline = $page->position(); }
 else { $headline = $page->title(); }
@@ -29,30 +29,30 @@ if($page->location() != '') {
     <div class="g-col">
       <h1 class="header-headline display"><?= $headline ?></h1>
 
-      <? if ($page->subtitle() != ''): ?>
+      <?php if ($page->subtitle() != ''): ?>
         <h2 class="header-subtitle delta"><?= $page->subtitle() ?></h2>
-      <? endif ?>
+      <?php endif ?>
 
       <ul class="header-meta milli u-margin-top-sm inline-list">
-        <? if ($location != NULL): ?>
+        <?php if ($location != NULL): ?>
           <li class="career-header-meta-item header-meta-item">
-            <? snippet('svg-img', ['filename' => 'icons/location-white', 'class' => 'career-header-icon career-header-icon-location']) ?>
+            <?php snippet('svg-img', ['filename' => 'icons/location-white', 'class' => 'career-header-icon career-header-icon-location']) ?>
             <span class="u-screenreader"><?= $page->parent()->locationLabel() ?>: </span><?= $location ?>
           </li>
-        <? endif ?>
-        <? if ($hours != NULL): ?>
+        <?php endif ?>
+        <?php if ($hours != NULL): ?>
           <li class="career-header-meta-item header-meta-item">
-            <? snippet('svg-img', ['filename' => 'icons/time-white', 'class' => 'career-header-icon career-header-icon-hours']) ?>
+            <?php snippet('svg-img', ['filename' => 'icons/time-white', 'class' => 'career-header-icon career-header-icon-hours']) ?>
             <?= $hours ?>
           </li>
-        <? endif ?>
+        <?php endif ?>
       </ul>
 
     </div>
   </div>
 
-  <? pattern('breadcrumbs') ?>
-  <? snippet('global-header-hero') ?>
-  <? snippet('global-header-graphic') ?>
+  <?php pattern('breadcrumbs') ?>
+  <?php snippet('global-header-hero') ?>
+  <?php snippet('global-header-graphic') ?>
 
 </header>

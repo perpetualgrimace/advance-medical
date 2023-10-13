@@ -1,4 +1,4 @@
-<?
+<?php
 
 $limit = 2;
 
@@ -21,10 +21,10 @@ if ($location != '' && $relatedCount >= 1): ?>
     <h2 class="display beta u-margin-bottom"><?= ktStrip($page->ctaHeading()); ?></h2>
   </div>
 
-  <? foreach ($relatedPages as $relatedPage):
+  <?php foreach ($relatedPages as $relatedPage):
     pattern('career-card', array('item' => $relatedPage, 'cardLayout' => 'g-6'));
   endforeach; ?>
 
 </div>
 
-<? endif ?>
+<?php endif ?>

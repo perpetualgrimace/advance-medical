@@ -1,4 +1,4 @@
-<?
+<?php
 
 // path to icons
 $iconsPath = $site->url() . '/assets/img/icons';

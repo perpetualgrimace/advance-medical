@@ -1,4 +1,4 @@
-<?
+<?php
 
 // get children
 $children = $page->children()->visible();
@@ -8,19 +8,19 @@ if(isset($image)) { $filename = $image; } else { $filename = NULL; }
 
 ?>
 
-<? if($filename != NULL): ?>
+<?php if($filename != NULL): ?>
   <figure class="figure g-col g-4 u-float-right">
-    <? snippet('retina-img', ['filename' => $filename, 'class' => 'u-margins-auto', 'extension' => 'jpg']) ?>
+    <?php snippet('retina-img', ['filename' => $filename, 'class' => 'u-margins-auto', 'extension' => 'jpg']) ?>
   </figure>
-<? endif ?>
+<?php endif ?>
 
 <article class="g-col g-8">
   <?= $page->text()->kirbytext() ?>
 
   <ul class="teaser-list u-margin-top-lg">
-    <? foreach ($children as $child): ?>
-      <? pattern('teaser', ['item' => $child]) ?>
-    <? endforeach ?>
+    <?php foreach ($children as $child): ?>
+      <?php pattern('teaser', ['item' => $child]) ?>
+    <?php endforeach ?>
   </ul>
 
 </article>

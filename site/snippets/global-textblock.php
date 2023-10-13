@@ -1,4 +1,4 @@
-<?
+<?php
 
 // check for optional variables passed from template
 if(isset($layout)) { $layout = $layout; } else { $layout = 'g-8'; }
@@ -9,16 +9,16 @@ if (isset($extension)) { $extension = $extension; } else { $extension = 'png'; }
 
 ?>
 
-<? if($filename != NULL): ?>
+<?php if($filename != NULL): ?>
   <figure class="figure g-col g-4 u-float-right">
-    <? snippet('retina-img', array('filename' => $filename, 'class' => 'u-margins-auto', 'extension' => $extension)) ?>
-    <? if($caption != ''): ?>
+    <?php snippet('retina-img', array('filename' => $filename, 'class' => 'u-margins-auto', 'extension' => $extension)) ?>
+    <?php if($caption != ''): ?>
       <figcaption class="figcaption u-margin-top">
         <?= $caption ?>
       </figcaption>
-    <? endif ?>
+    <?php endif ?>
   </figure>
-<? endif ?>
+<?php endif ?>
 
 <article class="g-col <?= $layout ?>">
   <?= $field->kirbytext() ?>

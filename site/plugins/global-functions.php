@@ -1,4 +1,4 @@
-<?
+<?php
 
 // sanitize strings
 function sanitize( $string ) {

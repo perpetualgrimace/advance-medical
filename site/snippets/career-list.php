@@ -1,4 +1,4 @@
- <?
+ <?php
 
   // check for optional variables passed from template
   if(isset($layout)): $layout = $layout; else: $layout = ''; endif;
@@ -26,8 +26,8 @@
 <div class="g-col <?= $layout ?>">
 
     <!-- display cards -->
-    <div class="g-columns card-list<? if (isset($query)) { echo ' u-margin-top';} ?>">
-      <?
+    <div class="g-columns card-list<?php if (isset($query)) { echo ' u-margin-top';} ?>">
+      <?php
       // get the first row
       foreach ($items as $item) {
         pattern('career-card', array('item' => $item, 'cardLayout' => $cardLayout));
@@ -37,13 +37,13 @@
 
 
     <!-- more link -->
-    <? if($page->isHomePage() && ($visibleContent->count() > 3)): ?>
+    <?php if($page->isHomePage() && ($visibleContent->count() > 3)): ?>
       <div class="g-columns u-left-right">
         <div class="g-col">
           <a href="blog" class="more-link button"><?= $pages->find('careers')->moreButton() ?></a>
         </div>
       </div>
-    <? endif ?>
+    <?php endif ?>
 
 
 </div>

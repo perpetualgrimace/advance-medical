@@ -1,4 +1,4 @@
-<?
+<?php
 
 // text that applies next to menu icon
 $menutext = 'Menu';

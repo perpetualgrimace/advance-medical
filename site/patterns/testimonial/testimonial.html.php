@@ -1,4 +1,4 @@
-<?
+<?php
 
 $testimonials = $pages->find('testimonials')->grandChildren();
 
@@ -42,23 +42,23 @@ if($testimonial->testimonee() != '') {
 ?>
 
 <div class="section testimonial u-fullwidth">
-  <div class="g-col g-8<? e($testimonialBackgroundImg == NULL, ' u-margins-auto') ?>">
+  <div class="g-col g-8<?php e($testimonialBackgroundImg == NULL, ' u-margins-auto') ?>">
     <blockquote class="testimonial-quote">
       <p class="testimonial-text">&ldquo;<?= $testimonial->text() ?>&rdquo;</p>
       <p class="testimonial-attribution"><?= $testimonee ?>
-        <? /* if ($testimonialImg != NULL): ?>
+        <?php /* if ($testimonialImg != NULL): ?>
           <img src="<?= $testimonialImg ?>" class="testimonial-img" alt="" draggable="false">
-        <? endif  */ ?>
+        <?php endif  */ ?>
       </p>
     </blockquote>
   </div>
-  <? if ($testimonialBackgroundImg != NULL): ?>
+  <?php if ($testimonialBackgroundImg != NULL): ?>
     <div class="testimonial-background-img" data-bg-src="<?= $testimonialBackgroundImg ?>"></div>
     <noscript>
       <div class="testimonial-background-img" style="background-image: url(<?= $testimonialBackgroundImg ?>)"></div>
     </noscript>
-  <? else: ?>
+  <?php else: ?>
     <div class="testimonial-background-img"></div>
-  <? endif ?>
+  <?php endif ?>
 
 </div>

@@ -1,4 +1,4 @@
-<?
+<?php
 
 $parent = $item->parent();
 $category = $parent->slug();
@@ -35,24 +35,24 @@ $featured = $item->featured();
 ?>
 
 
-<blockquote class="testimonial-card-container u-margin-top-off u-margin-bottom<? if($featured != '' && $featured == 'true') { echo ' is-featured'; } ?>" data-category="<?= $categorySanitized ?>">
+<blockquote class="testimonial-card-container u-margin-top-off u-margin-bottom<?php if($featured != '' && $featured == 'true') { echo ' is-featured'; } ?>" data-category="<?= $categorySanitized ?>">
   <div class="testimonial-card-inner">
-    <? if ($testimonialImg != NULL): ?>
+    <?php if ($testimonialImg != NULL): ?>
       <img data-src="<?= $testimonialImg ?>" class="testimonial-card-img" alt="" draggable="false">
       <noscript>
         <img src="<?= $testimonialImg ?>" class="testimonial-card-img" alt="" draggable="false">
       </noscript>
-    <? endif ?>
+    <?php endif ?>
     <p class="testimonial-card-text">&ldquo;<?= $item->text() ?>&rdquo;</p>
     <p class="testimonial-card-attribution"><?= $testimonee ?>
-      <? if ($item->credentials() != ''): ?>
+      <?php if ($item->credentials() != ''): ?>
         <span class="testimonial-card-credentials"><?= $item->credentials() ?></span>
-      <? elseif ($categorySanitized == 'physician'): ?>
+      <?php elseif ($categorySanitized == 'physician'): ?>
         <span class="testimonial-card-credentials"><?= $pages->find('authors')->defaultCredentials(); ?></span>
-      <? endif ?>
+      <?php endif ?>
     </p>
   </div>
-  <? /* if ($testimonialImg != NULL): ?>
+  <?php /* if ($testimonialImg != NULL): ?>
     <div class="testimonial-img testimonial-card-img u-margin-top-off" data-bg-src="<?= $testimonialImg ?>"></div>
-  <? endif */ ?>
+  <?php endif */ ?>
 </blockquote>

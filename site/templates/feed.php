@@ -1,4 +1,4 @@
-<?
+<?php
 
 // set pages to be fed
 $blogs = $pages->find('blog')->children()->visible()->sortBy('date')->limit(10);

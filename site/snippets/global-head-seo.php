@@ -1,4 +1,4 @@
-<?
+<?php
 
 // for convenience
 $siteTitle     = $site->title();
@@ -58,50 +58,50 @@ if($page->author() != '') {
 
 <!-- Google Plus -->
 <meta itemprop="name" content="<?= $pageTitle ?>">
-<? if ($shareDescription != NULL): ?>
+<?php if ($shareDescription != NULL): ?>
   <meta itemprop="description" content="<?= $shareDescription ?>">
-<? endif ?>
-<? if ($img != NULL): ?>
+<?php endif ?>
+<?php if ($img != NULL): ?>
   <meta itemprop="image" content="<?= $img ?>">
-<? endif ?>
+<?php endif ?>
 
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="<?= $twitterHandle ?>">
 <meta name="twitter:title" content="<?= $pageTitle ?>">
-<? if ($shareDescription != NULL): ?>
+<?php if ($shareDescription != NULL): ?>
   <meta name="twitter:description" content="<?= $shareDescription ?>">
-<? endif ?>
-<? if ($img != NULL): ?>
+<?php endif ?>
+<?php if ($img != NULL): ?>
   <meta name="twitter:image:src" content="<?= $img ?>">
-<? endif ?>
+<?php endif ?>
 <meta name="twitter:player" content="">
 
 
 <!-- Open Graph General (Facebook & Pinterest) -->
 <meta property="og:url" content="<?= $pageUrl ?>">
 <meta property="og:title" content="<?= $pageTitle ?>">
-<? if ($shareDescription != NULL): ?>
+<?php if ($shareDescription != NULL): ?>
   <meta name="og:description" content="<?= $shareDescription ?>">
-<? endif ?>
+<?php endif ?>
 <meta property="og:site_name" content="<?= $siteTitle ?>">
-<? if ($img != NULL): ?>
+<?php if ($img != NULL): ?>
   <meta name="og:image" content="<?= $img ?>">
-<? endif ?>
+<?php endif ?>
 <meta property="fb:admins" content="">
 <meta property="fb:app_id" content="">
 <meta property="og:locale" content="en_US">
 
 
 <!-- Open Graph Article (Facebook & Pinterest) -->
-<? if ($page->template() == 'blog'): ?>
+<?php if ($page->template() == 'blog'): ?>
   <meta property="og:type" content="article">
   <meta property="article:author" content="<?= $author ?>">
   <meta property="article:section" content="Advertising">
   <meta property="article:tag" content="<?= $tags ?>">
   <meta name="twitter:creator" content="<?= $twitterHandle ?>">
-<? else: ?>
+<?php else: ?>
   <meta property="og:type" content="website">
   <meta name="twitter:creator" content="<?= $twitterHandle ?>">
-<? endif ?>
+<?php endif ?>

@@ -1,4 +1,4 @@
-<?
+<?php
 
 // get social items
 $items = ['Facebook', 'Twitter', 'LinkedIn']
@@ -8,7 +8,7 @@ $items = ['Facebook', 'Twitter', 'LinkedIn']
 <h3 class="footer-heading delta u-upper"><?= $site->footerFollowHeading() ?></h3>
 
 <ul class="footer-follow-list inline-list u-margin-top-sm">
-  <?
+  <?php
     foreach ($items as $item):
 
     $urlField      = $item . 'Url';
@@ -20,9 +20,9 @@ $items = ['Facebook', 'Twitter', 'LinkedIn']
   ?>
     <li class="footer-follow-item milli">
       <a class="footer-follow-link footer-link nav-link u-inline-img" href="<?= $socialUrl . $socialAccount ?>">
-        <? snippet('svg-img', array('filename' => $socialIcon, 'class' => 'footer-follow-img')) ?>
+        <?php snippet('svg-img', array('filename' => $socialIcon, 'class' => 'footer-follow-img')) ?>
         <?= $item ?>
       </a>
     </li>
-  <? endif; endforeach ?>
+  <?php endif; endforeach ?>
 </ul>

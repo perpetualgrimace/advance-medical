@@ -1,4 +1,4 @@
-<?
+<?php
 
 // check for optional variables passed from template
 if(isset($layout)): $layout = $layout; else: $layout = 'g-4'; endif;
@@ -22,7 +22,7 @@ $searchText = $page->parent()->searchText();
     <span class="delta">or<label for="search" class="u-screenreader"><?= $searchText ?></label></span>
   </p>
 
-  <? snippet('search-bar', array(
+  <?php snippet('search-bar', array(
     'searchTarget' => 'career-list',
     'searchPlaceholder' => $searchText
   )) ?>

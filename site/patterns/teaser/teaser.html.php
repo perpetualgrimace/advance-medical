@@ -1,4 +1,4 @@
-<?
+<?php
 
 // custom thumbnail image
 if ($item->thumbImg() != '') {

@@ -1,4 +1,4 @@
-<?
+<?php
 // get template
 $template = str_replace('.', '-', $page->intendedTemplate()) . ' ';
 

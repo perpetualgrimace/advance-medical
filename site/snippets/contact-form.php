@@ -37,7 +37,7 @@
 
   <div class="g-columns">
     <div class="g-col">
-      <button name="_submit" class="button button--fullwidth" type="submit" value="<?= $form->token() ?>"<? e($form->successful(), ' disabled')?>><?= $page->submit() ?></button>
+      <button name="_submit" class="button button--fullwidth" type="submit" value="<?= $form->token() ?>"<?php e($form->successful(), ' disabled')?>><?= $page->submit() ?></button>
     </div>
   </div>
 

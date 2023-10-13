@@ -5,11 +5,11 @@
 
         <a class="skip u-screenreader" href="#main"><?= $site->skipLink() ?></a>
 
-        <? snippet('global-nav-logo') ?>
-        <? snippet('global-nav-toggle') ?>
-        <? snippet('global-nav-main') ?>
-        <? snippet('language-select-google') ?>
-        <? // pattern('language-select') ?>
+        <?php snippet('global-nav-logo') ?>
+        <?php snippet('global-nav-toggle') ?>
+        <?php snippet('global-nav-main') ?>
+        <?php snippet('language-select-google') ?>
+        <?php // pattern('language-select') ?>
 
         <div hidden id="current"><?= $site->currentPage() ?></div>
 

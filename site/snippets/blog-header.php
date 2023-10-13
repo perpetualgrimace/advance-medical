@@ -1,4 +1,4 @@
-<?
+<?php
 //set headline
 if($page->headline() != '') { $headline = $page->headline(); }
 else { $headline = $page->title(); }
@@ -20,19 +20,19 @@ if($page->category() != '') {
     <div class="g-col">
       <h1 class="header-headline display"><?= $headline ?></h1>
 
-      <? if ($page->subtitle() != ''): ?>
+      <?php if ($page->subtitle() != ''): ?>
         <h2 class="header-subtitle gamma"><?= $page->subtitle() ?></h2>
-      <? endif ?>
+      <?php endif ?>
 
-      <? if ($page->category() != ''): ?>
+      <?php if ($page->category() != ''): ?>
         <p class="header-meta milli"><?= $page->parent()->categoryHeading() ?> <a href="<?= $site->url() . '/blog#' . $categorySanitized ?>" class="header-meta-link"><?= $page->category() ?></a></p>
-      <? endif ?>
+      <?php endif ?>
 
     </div>
   </div>
 
-  <? pattern('breadcrumbs') ?>
-  <? snippet('global-header-hero') ?>
-  <? snippet('global-header-graphic') ?>
+  <?php pattern('breadcrumbs') ?>
+  <?php snippet('global-header-hero') ?>
+  <?php snippet('global-header-graphic') ?>
 
 </header>

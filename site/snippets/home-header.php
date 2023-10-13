@@ -1,4 +1,4 @@
-<?
+<?php
 
 $slides = $page->heroSlides()->toStructure();
 $i = 0;
@@ -21,18 +21,18 @@ $i = 0;
 
   <!-- slideshow -->
   <div class="home-slideshow-container u-margin-top-off u-margin-top-off-children" width="0" height="0">
-    <? foreach($slides as $slide):
+    <?php foreach($slides as $slide):
       $i++;
     ?>
-      <img class="home-slideshow-img" <? if($i > 1) { echo 'data-'; } ?>src="<?= $site->url() . '/content/home/' . $slide->slide() ?>" alt="" draggable="false">
-      <? if($i > 1): ?><noscript>
+      <img class="home-slideshow-img" <?php if($i > 1) { echo 'data-'; } ?>src="<?= $site->url() . '/content/home/' . $slide->slide() ?>" alt="" draggable="false">
+      <?php if($i > 1): ?><noscript>
         <img class="home-slideshow-img" src="<?= $site->url() . '/content/home/' . $slide->slide() ?>" alt="" draggable="false">
-      </noscript><? endif ?>
-    <? endforeach ?>
+      </noscript><?php endif ?>
+    <?php endforeach ?>
   </div>
 
 
-  <? /*
+  <?php /*
   <!-- video -->
   <div class="home-video-container u-margin-top-off u-margin-top-off-children" width="0" height="0">
     <video class="home-video" id="video-background" preload="auto" autoplay loop="loop" muted>
