@@ -1,7 +1,7 @@
 <?php
 
 // main menu items
-$items = $pages->visible();
+$items = $pages->listed();
 
 ?>
 
@@ -22,7 +22,7 @@ $items = $pages->visible();
     in_array($item->uri(), explode(', ', $site->dropdownable()))): ?>
 
     <ul class="dropdown" role="group">
-      <?php foreach($item->children()->visible() as $child): ?>
+      <?php foreach($item->children()->listed() as $child): ?>
 
         <li class="nav-item dropdown-item" role="menuitem">
           <a id="dropdown-item-<?= $child->slug() ?>" class="nav-link dropdown-link<?php e($child->isOpen(), ' is-active-pg') ?>" <?php e( ($child->slug() == $page->slug() ), 'aria-describedby="current"') ?> href="<?php e( $child->isOpen() && ( $page->slug() == $child->slug() ), '#main', $child->url() ) ?>">

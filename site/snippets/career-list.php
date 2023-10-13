@@ -18,7 +18,7 @@
     $items = $results;
   // ...otherwise, grab the most recent of each content type
   } else {
-    $items = $page->children()->visible()->sortBy('date', 'desc');
+    $items = $page->children()->listed()->sortBy('date', 'desc');
   }
 
 ?>

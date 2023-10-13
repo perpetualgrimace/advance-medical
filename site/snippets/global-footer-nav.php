@@ -1,7 +1,7 @@
 <?php
 
 // main menu items
-$items = $pages->visible();
+$items = $pages->listed();
 $i = 0;
 
 ?>

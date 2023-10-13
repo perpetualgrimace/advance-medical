@@ -7,7 +7,7 @@ return function($site, $pages, $page) {
   if($query != '') {
 
     $results = page('testimonials')->search($query, 'title|text|testimonee|category');
-    $results = $results->visible()->flip();
+    $results = $results->listed()->flip();
 
     return array(
       'query'      => $query,

@@ -12,7 +12,7 @@ if(isset($source) && $source != '') {
 // otherwise, pull a random one
 } else {
   $category = 'physician';
-  $testimonial = $pages->find('testimonials/physicians')->children()->visible()->shuffle()->first();
+  $testimonial = $pages->find('testimonials/physicians')->children()->listed()->shuffle()->first();
   $parent = $testimonial->parent();
 }
 

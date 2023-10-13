@@ -5,12 +5,12 @@
 if ($page->hasNextVisible()) {
   $next = $page->nextVisible();
 } else {
-  $next = $page->siblings()->visible()->first();
+  $next = $page->siblings()->listed()->first();
 }
 if ($page->hasPrevVisible()) {
   $prev = $page->prevVisible();
 } else {
-  $prev = $page->siblings()->visible()->last();
+  $prev = $page->siblings()->listed()->last();
 }
 
 // set next image

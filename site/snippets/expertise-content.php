@@ -1,7 +1,7 @@
 <?php
 
 // get children
-$children = $page->children()->visible();
+$children = $page->children()->listed();
 
 // check for optional variables passed from template
 if(isset($image)) { $filename = $image; } else { $filename = NULL; }

@@ -19,10 +19,10 @@
   // ...otherwise, grab the most recent of each content type
   } else {
     // temporarily show all
-    $visibleContent = $pages->find('blog')->children()->visible()->flip();
+    $visibleContent = $pages->find('blog')->children()->listed()->flip();
     $items = $visibleContent;
     /*
-    $visibleContent = $pages->find('blog')->children()->visible()->flip();
+    $visibleContent = $pages->find('blog')->children()->listed()->flip();
     $latestArticle  = $visibleContent->filterBy('template', 'blog-article')->first();
     $latestVideo    = $visibleContent->filterBy('template', 'blog-video')->first();
     $latestRelease  = $visibleContent->filterBy('template', 'blog-release')->first();

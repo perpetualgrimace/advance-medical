@@ -4,7 +4,7 @@
   if(isset($layout)): $layout = $layout; else: $layout = ''; endif;
 
   // get all testimonials
-  $items = $page->grandChildren()->visible()->shuffle();
+  $items = $page->grandChildren()->listed()->shuffle();
 
   /*
   // if a query exists, get the search results...
@@ -12,7 +12,7 @@
     $items = $results;
   // ...otherwise, grab all testimonials
   } else {
-    $items = $page->grandChildren()->visible()->shuffle();
+    $items = $page->grandChildren()->listed()->shuffle();
   }
   */
 

@@ -12,7 +12,7 @@ $categories = $page->children();
       $categoryName = $category->title();
 
       // check for visible children
-      if ($category->children()->visible()->count() > 0):
+      if ($category->children()->listed()->count() > 0):
     ?>
       <option value="<?= $categoryField ?>"><?= $categoryName ?></option>
     <?php endif; endforeach ?>

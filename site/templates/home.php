@@ -1,7 +1,7 @@
 <?php
 
 // define content types
-$articles = $pages->find('blog')->children()->visible()->filterBy('template', 'blog-article');
+$articles = $pages->find('blog')->children()->listed()->filterBy('template', 'blog-article');
 
 // template
 snippet('global-head');

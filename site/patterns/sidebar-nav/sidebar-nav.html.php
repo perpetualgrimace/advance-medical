@@ -2,13 +2,13 @@
 
 // main menu items
 if ($page->depth() == '1') {
-  $items = $page->children()->visible();
+  $items = $page->children()->listed();
   $parent = $page;
 } elseif ($page->depth() == '2') {
-  $items = $page->siblings()->visible();
+  $items = $page->siblings()->listed();
   $parent = $page->parent();
 } elseif ($page->depth() == '3') {
-  $items = $page->parent()->siblings()->visible();
+  $items = $page->parent()->siblings()->listed();
   $parent = $page->parent()->parent();
 } else {
   $items = NULL;
@@ -36,7 +36,7 @@ if ($page->depth() == '1') {
       <?php if($item->hasVisibleChildren()): ?>
 
       <ul class="nested-sidebar-nav-list" role="group">
-        <?php foreach($item->children()->visible() as $child): ?>
+        <?php foreach($item->children()->listed() as $child): ?>
 
           <li class="nested-sidebar-nav-item nav-item" role="menuitem">
             <a class="nested-sidebar-nav-link nav-link<?php e($child->isOpen(), ' is-active-pg') ?>" href="<?php e( $child->isOpen() && ( $page->slug() == $child->slug() ), '#main', $child->url() ) ?>">

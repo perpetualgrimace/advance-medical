@@ -3,7 +3,7 @@
 return [
   'defaults' => [
     'item' => function() {
-      return site()->pages()->find('blog')->children()->visible()->shuffle()->first();
+      return site()->pages()->find('blog')->children()->listed()->shuffle()->first();
     },
     'cardLayout' => ''
   ]

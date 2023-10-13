@@ -4,7 +4,7 @@
 if(isset($layout)) { $layout = $layout; } else { $layout = 'g-9'; }
 
 // get children
-$children = $page->children()->visible();
+$children = $page->children()->listed();
 
 ?>
 

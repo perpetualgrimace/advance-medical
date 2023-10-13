@@ -11,7 +11,7 @@ if($page->category() != '') {
   $categorySanitized = NULL;
 }
 
-$relatedPages = $page->siblings()->visible()->filterBy('category', $category)->not($page)->sortBy('date', 'desc')->limit($limit);
+$relatedPages = $page->siblings()->listed()->filterBy('category', $category)->not($page)->sortBy('date', 'desc')->limit($limit);
 $relatedCount = $relatedPages->count();
 
 if ($category != '' && $relatedCount >= 1):

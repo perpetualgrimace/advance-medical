@@ -11,7 +11,7 @@ if($page->location() != '') {
   $locationSanitized = NULL;
 }
 
-$relatedPages = $page->siblings()->visible()->filterBy('location', $location)->not($page)->sortBy('date', 'desc')->limit($limit);
+$relatedPages = $page->siblings()->listed()->filterBy('location', $location)->not($page)->sortBy('date', 'desc')->limit($limit);
 $relatedCount = $relatedPages->count();
 
 if ($location != '' && $relatedCount >= 1): ?>

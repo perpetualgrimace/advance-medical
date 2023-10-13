@@ -7,7 +7,7 @@ return function($site, $pages, $page) {
   if($query != '') {
 
     $results = page('careers')->search($query, 'title|text|byline|references|description|author');
-    $results = $results->visible()->sortBy('date');
+    $results = $results->listed()->sortBy('date');
 
     return array(
       'query'      => $query,
