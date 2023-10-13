@@ -1,81 +1,131 @@
 <?php
 
-// license
-c::set('license', 'K2-PRO-b1832ccc9f5adac41996b0df3e03ef51');
+// All config options: https://getkirby.com/docs/reference/system/options
+return [
+  'debug' => true,
+  'cache' => false,
+  'markdown' => [
+    'extra' => true
+  ],
+];
 
-// debugging
-c::set('debug', true);
+// c::set('license', 'K2-PRO-43d82b2a118a075f0faaec6dec24c415');
 
-// cache
-c::set('cache', true);
-c::set('cache.ignore', array(
-  'contact',
-  'search',
-  'sitemap',
-  'feed',
-  'testimonials'
-));
+// // cache
+// c::set('cache', false);
+// //debug
+// c::set('debug', true);
 
-// .md extension support
-c::set('content.file.extension', 'md');
+// // .md extension support
+// c::set('content.file.extension', 'md');
 
-// smart quotes
-c::set('smartypants', true);
+// // smart quotes
+// c::set('smartypants', true);
 
-// thumbnails
-c::set('thumbs.driver', 'im');
+// // thumbnails
+// c::set('thumbs.driver', 'gd');
 
-// auto-detect language
-// c::set('language.detect', true);
+// // languages
+// c::set('languages', array(
+//   array(
+//     'code'    => 'en',
+//     'name'    => 'English',
+//     'locale'  => 'en_US',
+//     'default' => true,
+//     'url'     => '/'
+//   )
+// ));
 
-// languages
-c::set('languages', array(
-  array(
-    'code'    => 'en',
-    'name'    => 'English',
-    'locale'  => 'en_US',
-    'default' => true,
-    'url'     => '/'
-  )
-));
+// // routing
+// c::set('routes', array(
 
-// patterns config
-c::set('patterns.preview.css', 'assets/build/css/main.min.css');
-c::set('patterns.preview.js', 'assets/build/js/main.min.js');
-c::set('patterns.preview.background', '#002A54');
+//   // rss » feed
+//   array(
+//     'pattern' => 'rss',
+//     'action'  => function() {
+//       go('feed');
+//     }
+//   ),
 
-// routing
-c::set('routes', array(
+//   // admin » panel
+//   array(
+//     'pattern' => ['admin', 'wp-admin'],
+//     'action'  => function() {
+//       go('panel');
+//     }
+//   ),
 
-  // rss » feed
-  array(
-    'pattern' => 'rss',
-    'action'  => function() {
-      go('feed');
-    }
-  ),
+//   // components » patterns
+//   array(
+//     'pattern' => 'components',
+//     'action'  => function() {
+//       go('patterns');
+//     }
+//   ),
 
-  // admin » panel
-  array(
-    'pattern' => 'admin',
-    'action'  => function() {
-      go('panel');
-    }
-  ),
+//   // articles vanity URL
+//   array(
+//     'pattern' => 'articles',
+//     'action'  => function() {
+//       go('blog/articles');
+//     }
+//   ),
 
-  // components » patterns
-  array(
-    'pattern' => 'components',
-    'action'  => function() {
-      go('patterns');
-    }
-  ),
+//   // products vanity URLs
+//   array(
+//     'pattern' => ['reviews', 'choice-reviews', 'choice-reviews-online'],
+//     'action'  => function() {
+//       go('products/reviews');
+//     }
+//   ),
+//   array(
+//     'pattern' => ['magazine', 'choice-magazine'],
+//     'action'  => function() {
+//       go('products/magazine');
+//     }
+//   ),
+//   array(
+//     'pattern' => ['cards', 'croc', 'reviews-on-cards', 'choice-reviews-on-cards'],
+//     'action'  => function() {
+//       go('products/cards');
+//     }
+//   ),
+//   array(
+//     'pattern' => ['rcl', 'resources-for-college-libraries'],
+//     'action'  => function() {
+//       go('products/rcl');
+//     }
+//   ),
+//   array(
+//     'pattern' => ['acrl', 'acrl-books', 'books-and-resources'],
+//     'action'  => function() {
+//       go('products/acrl-resources');
+//     }
+//   ),
+//   array(
+//     'pattern' => ['trial', 'free-trial'],
+//     'action'  => function() {
+//       go('products/reviews/trial');
+//     }
+//   ),
 
-  // testimonials » home
-  array(
-    'pattern' => 'testimonials/(:any)',
-    'action'  => function() {
-      go('testimonials');
-    }
-  )
-));
+//   // redirect old webinar link, set up vanity URL
+//   array(
+//     'pattern' => ['acrl-choice-webinars', 'webinars'],
+//     'action' => function() {
+//       go('librarianship/webinars');
+//     }
+//   ),
+
+//   // librarianship vanity URLs
+//   array(
+//     'pattern' => 'essays',
+//     'action' => function() {
+//       go('librarianship/essays');
+//     }
+//   )
+// ));
+
+// // patterns
+// c::set('patterns.preview.css', 'assets/build/css/main.css');
+// c::set('patterns.preview.js', 'assets/build/js/main.js');
