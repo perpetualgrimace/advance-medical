@@ -1,8 +1,6 @@
+node_modules
 .DS_Store
-site/cache/**
-node_modules/**/.cache/**
-site/accounts/**.php
-node_modules/
-/assets/scss/.sass-cache/**
-/dploy.yaml
-/assets/scss/5-components
+thumbs
+media
+site/accounts
+kirby
