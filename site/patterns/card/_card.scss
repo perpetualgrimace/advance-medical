@@ -2,8 +2,6 @@
 // standard card
 ////////////////////////////////
 
-
-
 @media (max-width: $m - 0.001) {
   .card-container + .card-container {
     padding-top: 0;
@@ -18,7 +16,6 @@
   border-bottom: $border-width solid $brand-color;
   min-height: rem(100);
 }
-
 
 // thumbnail image size
 .card-thumb {
@@ -62,13 +59,14 @@
 }
 
 // reveal overlay on hover / focus
-&.card-thumb:hover, &.card-thumb:active,
-.card-inner.is-focused .card-thumb { // added via js
+.card-thumb:hover,
+.card-thumb:active,
+.card-inner.is-focused .card-thumb {
+  // added via js
   &:after {
     opacity: 0.6666666;
   }
 }
-
 
 // caption positioning
 .card-caption {
@@ -128,7 +126,6 @@
   }
 }
 
-
 ////////////////////////////////
 // states
 ////////////////////////////////
@@ -145,7 +142,6 @@
   }
 }
 
-
 ////////////////////////////////
 // article card
 ////////////////////////////////
@@ -155,7 +151,8 @@
 }
 .blog-article-card-title,
 .blog-article-card-link {
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     color: $article-color;
   }
 }
@@ -167,7 +164,6 @@
   background-color: $article-color;
 }
 
-
 ////////////////////////////////
 // video card
 ////////////////////////////////
@@ -177,7 +173,8 @@
 }
 .blog-video-card-title,
 .blog-video-card-link {
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     color: $video-color;
   }
 }
@@ -211,7 +208,8 @@
 }
 .blog-release-card-title,
 .blog-release-card-link {
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     color: $release-color;
   }
 }
