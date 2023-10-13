@@ -6,7 +6,7 @@ if(isset($field)) { $field = $page->$field(); } else { $field = $page->text(); }
 
 // author
 if ($page->author() != '') {
-  pattern('author', ['source' => $page->author()]);
+  snippet('author', ['source' => $page->author()]);
 } ?>
 
 <article class="content g-col <?= $layout ?>">

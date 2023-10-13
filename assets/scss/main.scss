@@ -27,7 +27,28 @@
 @import "4-layout/footer";
 
 // Components
-@import "../../site/patterns/components";
+@import "5-components/author";
+@import "5-components/breadcrumbs";
+@import "5-components/big-number";
+@import "5-components/button";
+@import "5-components/card";
+@import "5-components/career-card";
+@import "5-components/testimonial-card";
+@import "5-components/contact-info";
+@import "5-components/contact-map";
+@import "5-components/doctor";
+@import "5-components/heatmap";
+@import "5-components/longtail";
+@import "5-components/language-select";
+@import "5-components/next";
+// @import "5-components/pagination";
+@import "5-components/scroll-indicator";
+@import "5-components/service-process";
+@import "5-components/sidebar-nav";
+@import "5-components/sidebar-share";
+@import "5-components/teaser";
+@import "5-components/testimonial";
+@import "5-components/video";
 
 // Motion
 @import "6-motion/transitions";

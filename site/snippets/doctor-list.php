@@ -33,7 +33,7 @@ if (isset($category) && $category == 'experts') {
     // get doctor image
     $img = $doctor->image($doctor->img())->url();
 
-    pattern('doctor', [
+    snippet('doctor', [
       'name' => $name,
       'caption' => $caption,
       'img' => $img

@@ -53,7 +53,7 @@ foreach($continents as $continent):
         <?php
 
         foreach ($infos as $info) {
-          pattern('contact-info', [
+          snippet('contact-info-group', [
              'city' => $info['city'],
              'country' => $info['country'],
              'address1' => $info['address1'],

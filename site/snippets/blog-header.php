@@ -31,7 +31,7 @@ if($page->category() != '') {
     </div>
   </div>
 
-  <?php pattern('breadcrumbs') ?>
+  <?php snippet('breadcrumbs') ?>
   <?php snippet('global-header-hero') ?>
   <?php snippet('global-header-graphic') ?>
 

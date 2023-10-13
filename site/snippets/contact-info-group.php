@@ -21,7 +21,7 @@
         <?php snippet('icon-phone-dark.svg') ?>
         <a class="contact-info-link milli" href="tel:<?= sanitizePhone($phone) ?>" itemprop="streetAddress"><?= $phone ?></a>
       </li>
-  <?php endif ?>
+    <?php endif ?>
 
     <li class="contact-info-item">
       <?php snippet('icon-email-dark.svg') ?>

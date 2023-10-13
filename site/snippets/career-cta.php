@@ -22,7 +22,7 @@ if ($location != '' && $relatedCount >= 1): ?>
   </div>
 
   <?php foreach ($relatedPages as $relatedPage):
-    pattern('career-card', array('item' => $relatedPage, 'cardLayout' => 'g-6'));
+    snippet('career-card', array('item' => $relatedPage, 'cardLayout' => 'g-6'));
   endforeach; ?>
 
 </div>

@@ -30,7 +30,7 @@
       <?php
       // get the first row
       foreach ($items as $item) {
-        pattern('career-card', array('item' => $item, 'cardLayout' => $cardLayout));
+        snippet('career-card', array('item' => $item, 'cardLayout' => $cardLayout));
       }
       ?>
     </div>

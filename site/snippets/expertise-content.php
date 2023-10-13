@@ -19,7 +19,7 @@ if(isset($image)) { $filename = $image; } else { $filename = NULL; }
 
   <ul class="teaser-list u-margin-top-lg">
     <?php foreach ($children as $child): ?>
-      <?php pattern('teaser', ['item' => $child]) ?>
+      <?php snippet('teaser', ['item' => $child]) ?>
     <?php endforeach ?>
   </ul>
 

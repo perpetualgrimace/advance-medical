@@ -16,7 +16,7 @@ snippet('global-body-open');
 
     // cta
     snippet('blog-cta');
-    pattern('next');
+    snippet('next');
 
   snippet('global-main-close');
   // footer

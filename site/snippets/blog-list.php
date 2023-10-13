@@ -68,13 +68,13 @@
       <?php
       // get the first row
       foreach ($items->limit($limit) as $item) {
-        pattern('card', array('item' => $item, 'cardLayout' => $cardLayout));
+        snippet('card', array('item' => $item, 'cardLayout' => $cardLayout));
       }
       // if we're looking at the blog page, get the rest
       /*
       if ($page->slug() == 'blog' && (!isset($query))) {
         foreach ($remainders as $item) {
-          pattern('card', array('item' => $item, 'cardLayout' => $cardLayout));
+          snippet('card', array('item' => $item, 'cardLayout' => $cardLayout));
         }
       }
       */

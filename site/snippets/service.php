@@ -16,7 +16,7 @@ $categories = $page->categories()->toStructure();
 
   <?php if ($processes != '') {
     foreach ($processes as $process) {
-      pattern ('service-process', ['process' => $process]);
+      snippet('service-process', ['process' => $process]);
     }
   } ?>
 

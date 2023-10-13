@@ -9,7 +9,7 @@
         <?php snippet('global-nav-toggle') ?>
         <?php snippet('global-nav-main') ?>
         <?php snippet('language-select-google') ?>
-        <?php // pattern('language-select') ?>
+        <?php // snippet('language-select') ?>
 
         <div hidden id="current"><?= $site->currentPage() ?></div>
 

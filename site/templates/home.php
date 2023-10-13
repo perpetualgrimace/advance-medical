@@ -12,7 +12,7 @@ snippet('global-body-open');
   // page title
   snippet('global-main-open');
     snippet('home-header');
-    pattern('scroll-indicator');
+    snippet('scroll-indicator');
 
     // intro block
     snippet('global-section-open', ['id' => 'intro']);
@@ -20,7 +20,7 @@ snippet('global-body-open');
     snippet('global-section-close');
 
     // testimonial
-    pattern('testimonial', ['source' => $page->testimonial1()]);
+    snippet('testimonial', ['source' => $page->testimonial1()]);
 
     // enterprise block
     snippet('global-section-open');
@@ -28,7 +28,7 @@ snippet('global-body-open');
     snippet('global-section-close');
 
     // testimonial
-    pattern('testimonial', ['source' => $page->testimonial2()]);
+    snippet('testimonial', ['source' => $page->testimonial2()]);
 
     // blog content
     snippet('global-section-open', ['class' => 'u-padding-bottom-sm']);

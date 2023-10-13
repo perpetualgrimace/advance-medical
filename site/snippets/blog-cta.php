@@ -30,7 +30,7 @@ if ($category != '' && $relatedCount >= 1):
   </div>
 
   <?php foreach ($relatedPages as $relatedPage):
-    pattern('card', array('item' => $relatedPage, 'cardLayout' => $cardLayout));
+    snippet('card', array('item' => $relatedPage, 'cardLayout' => $cardLayout));
   endforeach; ?>
 
 </div>

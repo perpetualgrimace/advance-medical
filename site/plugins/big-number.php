@@ -4,7 +4,7 @@ kirbytext::$tags['big-number'] = array(
     'label'
   ),
   'html' => function($tag) {
-    return pattern('big-number', [
+    return snippet('big-number', [
       'number' => $tag->attr('big-number'),
       'label' => $tag->attr('label')
     ], true);

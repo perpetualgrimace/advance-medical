@@ -4,6 +4,6 @@ kirbytext::$tags['pattern'] = array(
   ),
   'html' => function($tag) {
   	$file =  $tag->attr('pattern');
-  	return pattern($file, array(), true);
+  	return snippet($file, array(), true);
   }
 );

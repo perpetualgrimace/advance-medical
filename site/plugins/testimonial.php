@@ -9,7 +9,7 @@ kirbytext::$tags['testimonial'] = array(
     $marginBottom = $tag->attr('marginBottom', 'xl');
 
     return '<aside class="u-margin-top-' . $marginTop . ' u-margin-bottom-' . $marginBottom . '">' .
-      pattern('testimonial', array('source' => $tag->attr('testimonial')), true) .
+      snippet('testimonial', array('source' => $tag->attr('testimonial')), true) .
     '</aside>';
   }
 );

@@ -30,7 +30,7 @@
         </ol>
 
         <?php if ($pagination->items() > $pag_num): ?>
-          <?= pattern('pagination', array('pagination' => $pagination)) ?>
+          <?= snippet('pagination', array('pagination' => $pagination)) ?>
         <?php endif; ?>
 
     <?php else: ?>

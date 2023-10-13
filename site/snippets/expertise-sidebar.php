@@ -7,6 +7,6 @@ if(isset($layout)): $layout = $layout; else: $layout = 'g-4'; endif;
 
 <aside class="sidebar g-col <?= $layout ?>">
 
-  <?php pattern('sidebar-nav') ?>
+  <?php snippet('sidebar-nav') ?>
 
 </aside>

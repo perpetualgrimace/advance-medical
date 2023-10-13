@@ -25,7 +25,7 @@
     <?php
     // get the first row
     foreach ($items as $item) {
-      pattern('testimonial-card', array('item' => $item));
+      snippet('testimonial-card', array('item' => $item));
     }
     ?>
   </div>

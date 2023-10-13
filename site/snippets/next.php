@@ -29,12 +29,12 @@ $cardLayout = 'g-6';
 
   <div class="nextprev-prev g-col <?= $cardLayout ?> u-left-center">
     <p class="display">Previous post: </p>
-    <?php pattern('card', ['item' => $prev]); ?>
+    <?php snippet('card', ['item' => $prev]); ?>
   </div>
 
   <div class="nextprev-next g-col <?= $cardLayout ?> u-left-center">
     <p class="display">Next post: </p>
-    <?php pattern('card', ['item' => $next]); ?>
+    <?php snippet('card', ['item' => $next]); ?>
   </div>
 
 </section>
