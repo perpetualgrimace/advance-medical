@@ -1,0 +1,53 @@
+title: Home
+pages: false
+icon: home
+deletable: false
+options:
+  status: false
+  template: false
+  url: false
+
+fields:
+  # translations: translations
+  title: title
+  headline: headline
+  heroText:
+    extends: defaultText
+    label: Header Text
+    toolbar: false
+    width: 2/3
+  heroSlides:
+    label: Header Slides
+    type: structure
+    style: table
+    width: 1/3
+    fields:
+      slide:
+        label: slide
+        type: image
+  text:
+    extends: defaultText
+    label: Intro text
+  testimonial1:
+    extends: testimonial
+    label: Testimonial 1
+  enterprise:
+    extends: defaultText
+    label: Enterprise
+  testimonial2:
+    extends: testimonial
+    label: Testimonial 2
+  # engagement:
+  #   extends: defaultText
+  #   label: Engagement
+  # testimonial3:
+  #   extends: testimonial
+  #   label: Testimonial 3
+  #   help: This one is at the bottom of the page
+
+  ctaLine: ctaLine
+  ctaHelp: ctaHelp
+  cta: cta
+  ctaText: ctaText
+  ctaButton: ctaButton
+  ctaLink: ctaLink

@@ -1,0 +1,22 @@
+title: Press Release
+pages: false
+files: true
+icon: microphone
+
+fields:
+  # translations: translations
+  title:
+    label: Press release title
+  date:
+    label: Publication date
+    type: date
+    width: 1/3
+  category: category
+  author: authorSelect
+
+  thumbImg: blogThumb
+  heroImg: hero
+
+  text:
+    extends: defaultText
+    label: Press release content

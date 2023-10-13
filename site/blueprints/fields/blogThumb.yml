@@ -1,0 +1,4 @@
+label: Thumbnail image
+type: image
+help: 'Required size: 720px × 404px. Optimize at <a href="http://tinypng.org">tinypng.org</a> before uploading.'
+width: 1/2

@@ -1,0 +1,22 @@
+title: Article
+pages: false
+files: true
+icon: pencil
+
+fields:
+  # translations: translations
+  title:
+    label: Article title
+  date:
+    label: Publication date
+    type: date
+    width: 1/3
+  category: category
+  author: authorSelect
+
+  thumbImg: blogThumb
+  heroImg: hero
+
+  text:
+    extends: defaultText
+    label: Article content

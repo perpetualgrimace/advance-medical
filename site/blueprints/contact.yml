@@ -1,0 +1,100 @@
+title: Contact
+pages: false
+icon: envelope-o
+deletable: false
+options:
+  status: false
+  template: false
+  url: false
+
+fields:
+  # translations: translations
+  title: title
+  headline: headline
+  text: defaultText
+
+
+  email:
+    label: Email address
+    type: text
+    width: 1/4
+    validate: email
+    required: true
+  Facebook:
+    label: Facebook username
+    type: text
+    width: 1/4
+  Twitter:
+    label: Twitter username
+    type: text
+    width: 1/4
+  LinkedIn:
+    label: LinkedIn username
+    type: text
+    width: 1/4
+  cta: cta
+
+  line2:
+    type: line
+  infoHelp:
+    type: info
+    text: <h2>Contact information</h2>
+
+  infoHeading:
+    label: Contact information heading
+    help: Accessibility detail. Hidden heading for the contact information section for screen readers.
+  infoNA:
+    extends: contactInfo
+    label: North America
+  infoSA:
+    extends: contactInfo
+    label: South America
+  infoWE:
+    extends: contactInfo
+    label: Western Europe
+  infoCE:
+    extends: contactInfo
+    label: Central Europe
+  infoAsia:
+    extends: contactInfo
+    label: Asia
+  infoOceana:
+    extends: contactInfo
+    label: Oceana
+  infoAfrica:
+    extends: contactInfo
+    label: Africa
+
+  # line3:
+  #   type: line
+  # mapHelp:
+  #   type: info
+  #   text: <h2>All locations</h2>
+
+  # locationsHeading:
+  #   label: Contact information heading
+  # mapEurope:
+  #   extends: contactMap
+  #   label: Europe
+  # mapAsia:
+  #   extends: contactMap
+  #   label: Asia
+  # mapNA:
+  #   extends: contactMap
+  #   label: North America
+  # mapSA:
+  #   extends: contactMap
+  #   label: South America
+  # mapOceana:
+  #   extends: contactMap
+  #   label: Oceana
+  # mapAfrica:
+  #   extends: contactMap
+  #   label: Africa
+
+  svgHelp:
+    type: info
+    text: >
+      <h2>To add a location to the map graphic:</h2>
+      <p>An SVG graphic was created for the interactive dots on the map. Unfortunately, new dots must be added manually. Non-developers proceed at your own risk.</p>
+      <p>For more information, open the following file in your code editor of choice: site/snippets/contact-map.php.</p>

@@ -1,0 +1,36 @@
+////////////////////////////////
+// scroll indicator
+////////////////////////////////
+
+.scroll-indicator-container {
+  display: none;
+  z-index: 1;
+
+  @media (min-aspect-ratio: 4/3) {
+    display: block;
+    position: relative;
+    height: 0;
+    width: 100%;
+    top: -6rem;
+  }
+}
+
+.scroll-indicator-link {
+  display: inline-block;
+  padding: 1rem;
+}
+
+.scroll-indicator-img {
+  width: 3.4rem;
+  height: 3.4rem;
+  opacity: 0.3333333;
+}
+
+// interactions
+.scroll-indicator-link {
+  &:hover, &:focus, &:active {
+    .scroll-indicator-img {
+      opacity: 1;
+    }
+  }
+}

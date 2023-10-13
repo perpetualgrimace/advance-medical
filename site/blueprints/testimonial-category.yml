@@ -1,0 +1,20 @@
+title: Testimonial list
+pages: true
+  template: testimonial
+files: true
+icon: quote-left
+options:
+  preview: false
+  template: false
+  url: false
+
+fields:
+  # translations: translations
+  title:
+    extends: title
+    width: 1
+  backgroundImg: testimonialImg
+  testimonee:
+    label: Default testimonial attribution
+    width: 1/2
+    help: Will be used by unattributed testimonials in this category

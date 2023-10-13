@@ -1,0 +1,4 @@
+label: Headline
+type: text
+help: This will overwrite the page title at the top of the page
+width: 2/3

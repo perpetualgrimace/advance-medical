@@ -1,0 +1,25 @@
+Title: MD Foster
+
+----
+
+Text: Through my work with Advance Medical, I believe that I am using my expertise to reach more patients. It gives me great satisfaction to know that I can provide this service.
+
+----
+
+Testimonee: Elyse Foster, MD
+
+----
+
+Credentials: Professor Emeritus,  Cardiology,  University of California, San Francisco
+
+----
+
+Img: efoster-avatar.jpg
+
+----
+
+Logo:
+
+----
+
+Category: expert

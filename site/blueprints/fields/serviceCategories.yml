@@ -1,0 +1,15 @@
+label: Categories
+type: structure
+modalsize: large
+style: table
+entry: >
+  <h2>{{title}}</h2>
+  <p style="margin-bottom: 0.25em">{{caption}}</p>
+fields:
+  title:
+    label: Category name
+    type: text
+  caption:
+    label: Caption
+    type: markdown
+    toolbar: false

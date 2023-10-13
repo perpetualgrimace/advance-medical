@@ -1,0 +1,54 @@
+title: About page template
+pages: false
+files: true
+icon: info-circle
+
+fields:
+  # translations: translations
+  title: title
+  headline: headline
+  heroImg:
+    extends: hero
+    width: 1
+  text:
+    extends: defaultText
+    width: 2/3
+  textCaption:
+    type: markdown
+    label: Text caption (optional)
+    toolbar: false
+    width: 1/3
+  forgotten:
+    extends: defaultText
+    label: Text 2
+    width: 2/3
+  forgottenCaption:
+    type: markdown
+    label: Text 2 caption (optional)
+    toolbar: false
+    width: 1/3
+  access:
+    extends: defaultText
+    label: Text 3
+    width: 2/3
+  accessCaption:
+    type: markdown
+    label: Text 3 caption (optional)
+    toolbar: false
+    width: 1/3
+  who:
+    extends: defaultText
+    label: Text 4
+    width: 2/3
+  whoCaption:
+    type: markdown
+    label: Text 4 caption (optional)
+    toolbar: false
+    width: 1/3
+
+  ctaLine: ctaLine
+  ctaHelp: ctaHelp
+  cta: cta
+  ctaText: ctaText
+  ctaButton: ctaButton
+  ctaLink: ctaLink

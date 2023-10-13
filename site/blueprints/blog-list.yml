@@ -1,0 +1,75 @@
+title: Blog list page
+pages: true
+  template:
+    - blog-article
+    - blog-video
+    - blog-release
+  limit: 20
+files: true
+icon: book
+options:
+  template: false
+  url: false
+
+fields:
+  # translations: translations
+  headline:
+    extends: headline
+    label: Blog title
+    help: IMPORTANT — Change the blog title here and it will be used by all templates
+    width: 1/2
+  heroImg: hero
+  text: defaultText
+  placeholderImg:
+    label: Default blog thumbnail
+    type: image
+    help: This image will be used by any blog posts for which a thumbnail image is not provided
+    width: 1/2
+  categories:
+    label: List of categories
+    type: markdown
+    toolbar: hide
+    help: include a comma after each category
+    width: 1/2
+  allPosts:
+    label: All posts types
+    width: 1/4
+  articlePost:
+    label: Article post type
+    width: 1/4
+  videoPost:
+    label: Video post type
+    width: 1/4
+  releasePost:
+    label: Press release post type
+    width: 1/4
+  sortHeading:
+    label: Sort heading
+    width: 1/2
+  searchHeading:
+    label: Search heading
+    width: 1/2
+  filteringBy:
+    label: Category filter
+    width: 1/2
+    help: Used when sorting by category. The category name itself is added automatically.
+  showAll:
+    label: Unfilter link text
+    width: 1/2
+    help: Used to stop sorting by category.
+  categoryHeading:
+    label: Category heading
+    help: Used in the header of blog posts. The category itself is added automatically.
+    width: 1/2
+  shareHeading:
+    label: Share heading
+    help: Used in the sidebar of blog posts
+    width: 1/2
+  ctaHeading:
+    label: CTA heading
+    help: Used in the CTA of blog posts
+    width: 1/2
+  moreButton:
+    label: More posts button text
+    help: Used by home page
+    width: 1/2

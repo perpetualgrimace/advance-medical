@@ -1,0 +1,30 @@
+// set with and center the container
+.share-container {
+  width: auto;
+  // keep icons and labels together,
+  // even when there isn't technically enough space for them
+  white-space: nowrap;
+
+  // Set the ideal width for share links container. Fine in most languages.
+  @media (min-width: $m) {
+    max-width: 4.5em;
+  }
+}
+
+// display share items inline on small screens
+@media (max-width: $m - 0.001) {
+  .share-item {
+    display: inline-block;
+
+    &:not(:last-of-type) {
+      margin-right: 2rem;
+    }
+  }
+}
+
+// position svg;
+.share-img {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 0.25em;
+}

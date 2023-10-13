@@ -1,0 +1,24 @@
+title: Doctors template
+pages: false
+files: true
+icon: user-md
+
+fields:
+  # translations: translations
+  title: title
+  headline: headline
+  heroImg: hero
+  thumbImg:
+    extends: thumbImg
+    width: 1/2
+  description:
+    extends: description
+    width: 1
+  text: defaultText
+
+  ctaLine: ctaLine
+  ctaHelp: ctaHelp
+  cta: cta
+  ctaText: ctaText
+  ctaButton: ctaButton
+  ctaLink: ctaLink

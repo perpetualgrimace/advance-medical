@@ -1,0 +1,39 @@
+title: Video
+pages: false
+files: true
+icon: play
+
+fields:
+  # translations: translations
+  title:
+    label: Video post title
+  category: category
+  author:
+    extends: authorSelect
+    width: 2/3
+
+  youtubeId: youtubeId
+  category: category
+  thumbImg:
+    extends: blogThumb
+    label: Thumbnail image (optional)
+    help: 'Required size: 720px × 404px. Optimize at <a href="http://tinypng.org">tinypng.org</a> before uploading. Will replace the automatically generated youtube thumbnail.'
+  heroImg: hero
+
+  text:
+    label: Video description
+    type:  markdown
+    header1: h3
+    header2: h4
+    tools:
+      - header1
+      - header2
+      - bold
+      - italic
+      - link
+      - unorderedList
+
+  ctaHeading:
+    label: CTA heading
+    help: "Shown with categorically related posts. Note: the (page: category) part grabs the category value above."
+    default: "More from (page: category):"

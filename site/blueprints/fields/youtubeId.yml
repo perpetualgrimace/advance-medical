@@ -1,0 +1,3 @@
+label: YouTube ID — enter as soon as the YouTube video is available
+type: text
+help: This is used by the template to automatically display the video as well as the thumbnail. Copy it from the part of the YouTube video URL following '?v='. For example, if the URL is 'https://www.youtube.com/watch?v=<strong>tntOCGkgt98</strong>' then the YouTube ID will be '<strong>tntOCGkgt98</strong>'.

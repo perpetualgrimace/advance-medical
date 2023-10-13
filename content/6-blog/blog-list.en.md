@@ -1,0 +1,99 @@
+Title: Medical Blog
+
+----
+
+Headline: The Caring Connection
+
+----
+
+Placeholderimg: placeholder@2x.jpg
+
+----
+
+Text: Here are stories and advice from among hundreds of Physician Case Managers and Experts – the caring doctors who form the core of the Advance Medical team.
+
+----
+
+Categories:
+
+ICD10,
+CPT,
+Major diagnosis,
+Experts involved,
+Procedure,
+Country,
+Region,
+Industry,
+Impact on care
+
+----
+
+Sortheading: Sort by type
+
+----
+
+Searchheading: Search blog posts
+
+----
+
+Filteringby: Filtering by
+
+----
+
+Shareheading: Share this article
+
+----
+
+Showall: Show all posts
+
+----
+
+Categoryheading: Posted in topic:
+
+----
+
+Morebutton: View all posts
+
+----
+
+Allposts: all
+
+----
+
+Articlepost: article
+
+----
+
+Videopost: video
+
+----
+
+Releasepost: press release
+
+----
+
+Translations: 0
+
+----
+
+All:
+
+----
+
+Article:
+
+----
+
+Video:
+
+----
+
+Release:
+
+----
+
+ctaHeading: More in (page: category):
+
+----
+
+heroImg: blog-hero.jpg

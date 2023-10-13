@@ -1,0 +1,459 @@
+////////////////////////////////
+// global nav style
+////////////////////////////////
+
+// general nav link style
+.nav-link {
+  @include body-font;
+  @include font-smoothing;
+  text-decoration: none;
+  font-size: $milli;
+  color: $white;
+  display: block;
+  opacity: 0.8;
+  text-decoration: none;
+
+  &:hover, &:active,
+  &.is-active-pg {
+    opacity: 1;
+  }
+}
+
+
+////////////////////////////////
+// container
+////////////////////////////////
+
+// nav container
+.nav-container {
+  @include box-shadow($shadow);
+  top: 0;
+  width: 100%;
+  z-index: 11;
+  background: $brand-color;
+  position: fixed;
+}
+
+html[class*="translated"] {
+  .nav-container {
+    top: 40px !important;
+  }
+}
+
+// nav element
+.nav-main {
+  height: $nav-height;
+
+  a:hover,
+  a:focus {
+    background: $light-brand-color;
+    opacity: 1;
+  }
+}
+
+
+////////////////////////////////
+// logo
+////////////////////////////////
+
+// logo
+.nav-logo {
+  height: $nav-height;
+  padding-left: $gutter;
+  padding-right: $gutter;
+  z-index: 1; // above .nav-list
+
+  @media (max-width: $m - 0.001) {
+    @include horizontal-center;
+    position: absolute;
+  }
+
+  @media (min-width: $m) {
+    float: left;
+    left: -($gutter);
+  }
+}
+
+// svg positioning
+.nav-logo-img {
+  top: .75rem; // fudged
+  width: $logo-width;
+  height: $logo-height;
+}
+
+// not active page
+.nav-logo:not(.is-active-pg) {
+  opacity: 0.80;
+
+  &:hover, &:focus {
+    opacity: 1;
+  }
+}
+
+////////////////////////////////
+// main nav list
+////////////////////////////////
+
+// nav list
+.nav-list {
+  float: left;
+  background: $brand-color;
+
+  // small screens
+  @media (max-width: $m - 0.001) {
+    @include dropdown-hidden;
+    width: 100%; // fallback
+    width: 100vw;
+    top: 0;
+    z-index: -10;
+    left: -1rem; // fallbacks
+    left: calc(-50vw + 50%);
+    right: calc(-50vw + 50%);
+
+    // prevent page jump
+    &:before {
+      @include pseudo;
+      width: 100%;
+      height: $nav-height;
+    }
+
+    // fake box-shadow
+    &:after {
+      @include pseudo;
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      top: $nav-height;
+      background: $shadow;
+    }
+  }
+
+  // distribute on bigger screens
+  @media (min-width: $m) {
+    position: absolute;
+    width: 100%;
+    max-width: $max-container-width;
+    top: -0.1rem; // align text with logo and language select
+    left: 0; // align to grid
+    text-align: center;
+  }
+}
+
+// nav items
+.main-nav-item {
+  display: inline-block;
+}
+
+// specific to main nav links
+.main-nav-link {
+  line-height: $nav-height;
+
+  @media (min-width: $m) {
+    padding-left: 0.325rem;
+    padding-right: 0.325rem;
+    padding-bottom: 0.1rem; // compensate for alignment
+  }
+}
+
+
+////////////////////////////////
+// main nav on small screens
+////////////////////////////////
+
+// toggled list style
+@media (max-width: $m - 0.001) {
+  .main-nav-item {
+    width: (100% / 8);
+    text-align: center;
+  }
+  .main-nav-link {
+
+    &:hover, &:active, &:focus {
+      background: $brand-color;
+      color: $white;
+    }
+  }
+}
+
+// tiny screens
+@media (max-width: $s - 0.001) {
+  .main-nav-item {
+    width: (100% / 4);
+  }
+}
+
+// super small screens
+@media (max-width: $xxs - 0.001) {
+  .main-nav-item {
+    width: 100%;
+  }
+}
+
+
+////////////////////////////////
+// dropdown menu
+////////////////////////////////
+
+// dropdown menu
+.dropdown {
+  @include dropdown-hidden;
+  display: none; // hide on smaller screens
+  text-align: left;
+  min-width: 100%;
+  background: $secondary-color;
+  transform: scale(0.95);
+
+  // show on bigger screens
+  @media (min-width: $m) {
+    display: inline-block;
+    position: absolute;
+    top: $nav-height;
+    left: 0;
+  }
+}
+
+// states
+@media (min-width: $m) {
+  // reveal dropdown menu when hovering/focusing parent
+  .dropdown:hover,
+  .main-nav-item:hover .dropdown,
+  // If the item has a dropdown and the link is focused, target the adjacent dropdown menu
+  .has-dropdown .main-nav-link:focus + .dropdown,
+  .main-nav-link:focus + .dropdown,
+  // .is-focused class, added to .dropdown on focus via js
+  .dropdown.is-focused {
+    @include dropdown-visible;
+    transform: scale(1);
+    z-index: 1;
+  }
+}
+
+// dropdown link style
+.dropdown-link {
+  display: block;
+  padding: 0.35rem 0.5rem 0.5rem 0.5rem;
+  white-space: nowrap;
+
+  &:hover, &:active, &:focus {
+    background: $brand-color;
+  }
+}
+
+
+////////////////////////////////
+// nav menu toggle
+////////////////////////////////
+
+// expanded menu via js
+.nav-list.is-expanded {
+  @include dropdown-visible;
+}
+
+// menu toggle
+.nav-toggle {
+  position: absolute;
+  height: $nav-height;
+  padding: $gutter; // somewhat fudged
+  left: 0;
+
+  // active state theming
+  &.is-active {
+
+    .hamburger-bun {
+      background: $white;
+    }
+    .nav-toggle-text {
+      color: $white;
+    }
+
+  }
+
+  // hide on large screens
+  @media (min-width: $m) {
+    display: none;
+  }
+}
+
+// text
+.nav-toggle-text {
+  top: -0.1rem;
+
+  @media (min-width: $s) {
+    top: -0.05rem;
+  }
+}
+
+// humburger icon
+.hamburger {
+  display: inline-block;
+  margin-right: 0.25rem;
+
+  // initial state
+  &-bun {
+    display: block;
+    width: (2px * 9);
+    height: 2px;
+    border-radius: 1px;
+    background: $white;
+
+    & + & {
+      margin-top: (2px * 1.5);
+    }
+  }
+
+  // active state
+  &.is-active {
+    transform: translateX(5px);
+
+    .hamburger-bun-top {
+      transform: rotateZ(45deg) translateY(#{2px * 3.5});
+    }
+    .hamburger-bun-patty {
+      opacity: 0;
+    }
+    .hamburger-bun-bottom {
+      transform: rotateZ(-45deg) translateY(-#{2px * 3.5});
+    }
+  }
+}
+
+
+////////////////////////////////
+// social icons
+////////////////////////////////
+/*
+// social icons
+.nav-social-list {
+  display: none;
+  height: $nav-height;
+  width: 7rem;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+
+  // show on big-enough screens
+  @media (min-width: $xxs) {
+    display: block;
+  }
+
+  // send to the right instead of centering on bigger screens
+  @media (min-width: $m) {
+    float: right;
+    width: auto;
+    margin-left: $gutter;
+    margin-right: -($gutter * 0.5);
+  }
+}
+
+// social item
+.nav-social-item {
+  display: inline-block;
+  height: $nav-height;
+  overflow: hidden;
+}
+
+// social links
+.nav-social-link {
+  display: block;
+  padding: ($gutter * 0.7) ($gutter * 0.5); // fudged
+  max-height: $nav-height;
+
+  // scale icons with baseline
+  svg {
+    height: 1rem;
+
+    // default color
+    path {
+      fill: $black;
+    }
+  }
+}
+
+// :hover colors
+.nav-social-link-twitter {
+  &:hover path, &:active path, &:focus path {
+    fill: $twitter-color;
+  }
+}
+.nav-social-link-facebook {
+  &:hover path, &:active path, &:focus path {
+    fill: $facebook-color;
+  }
+}
+.nav-social-link-linkedin {
+  &:hover path, &:active path, &:focus path {
+    fill: $linkedin-color;
+  }
+}
+.nav-social-link-instagram {
+  &:hover path, &:active path, &:focus path {
+    fill: $instagram-color;
+  }
+}
+*/
+
+////////////////////////////////
+// skip link
+////////////////////////////////
+
+// skip link
+a.skip {
+  @include body-font;
+  padding: 0 0.5em 0.25em 0.5em;
+  margin-left: -0.25em; // offset padding
+  top: $nav-height; // position under nav bar
+  z-index: -1;
+  opacity: 0;
+  transform: translateY(-100%);
+  background: $brand-color;
+  color: $white;
+  font-size: $milli;
+}
+.skip:focus {
+  clip: auto;
+  height: auto;
+  width: auto;
+  overflow: visible;
+  border-radius: 0 0 $radius $radius;
+  opacity: 1;
+  transform: none;
+}
+
+
+////////////////////////////////
+// list template nav
+////////////////////////////////
+
+.list-category-alert {
+  position: absolute;
+  bottom: -0.5rem;
+  z-index: 1;
+}
+
+.list-select.is-hidden {
+  opacity: 0;
+  clip: rect(0 0 0 0);
+}
+
+.list-select .select-container {
+  // two columns
+  @media (max-width: $m - 0.001) {
+    width: 47.5%;
+
+    &:last-of-type {
+      float: right;
+    }
+  }
+  // one column
+  @media (max-width: $xs - 0.001) {
+    width: 100%;
+
+    &:last-of-type {
+      float: none;
+      margin-top: 0.5rem;
+    }
+  }
+  select {
+    width: 100%;
+  }
+}

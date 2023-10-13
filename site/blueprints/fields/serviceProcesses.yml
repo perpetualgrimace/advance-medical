@@ -1,0 +1,26 @@
+label: Features / process
+type: structure
+modalsize: large
+entry: >
+  <h2>{{title}}</h2>
+  <p style="margin-bottom: 0.25em">{{caption}}</p>
+  <p style="font-size: 0.75em; margin-bottom: 0"><strong>Main image:</strong> {{mainImg}}</p>
+  <p style="font-size: 0.75em; margin-bottom: 0"><strong>Fallback image:</strong> {{fallbackImg}}</p>
+fields:
+  title:
+    label: Step name
+    type: text
+  caption:
+    label: Caption
+    type: markdown
+    toolbar: false
+  mainImg:
+    label: Main image
+    type: image
+    help: >
+      <p><strong>First, upload a 228px &times; 310px (ish) image to the page.</strong> It can then be selected above.<br>Optimize it with <a href="https://jakearchibald.github.io/svgomg/">SVGOMG</a> before uploading.</p>
+  fallbackImg:
+    label: Fallback image
+    type: image
+    help: >
+      <p><strong>If the main image is an SVG, upload the fallback PNG here.</strong> Compress it at <a href="http://tinypng.org">tinypng.org</a> before uploading.</p>

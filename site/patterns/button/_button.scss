@@ -1,0 +1,97 @@
+////////////////////////////////
+// refactor
+////////////////////////////////
+
+// OG button
+.button {
+  @include button-base;
+
+  &:hover, &:focus, &:active {
+    background-color: $light-brand-color;
+    border-color: $light-brand-color;
+  }
+  &:focus {
+    @include box-shadow-focus;
+  }
+  &:active {
+    background: $light-brand-color; // overwrite glossy overlay
+  }
+
+  // selected button
+  &.is-selected {
+    background-color: $secondary-color;
+    border-color: $secondary-color;
+  }
+}
+
+
+// giant button
+.giant-button {
+  padding: 0.5em 1.75em 0.75em;
+
+  @media (min-width: $l) {
+    font-size: $gamma;
+  }
+}
+
+
+// hey look, this button is a block element
+.block-button {
+  display: block;
+  text-align: center;
+}
+
+
+// button group
+.button-group {
+  margin-top: 0.9em;
+  display: table;
+  width: 100%;
+  text-align: center;
+
+  > .button {
+    display: table-cell;
+    font-size: $milli;
+    width: auto;
+    // NOTE: adding left & right padding messes up
+    // the display:table-cell + auto width magic
+    padding-top: 0;
+    padding-bottom: 0;
+    // the following two lines are 100% fudged
+    height: 2.175rem;
+    line-height: 2.75;
+
+    &:first-of-type {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+    & + .button:not(:last-of-type) {
+      border-radius: 0 !important;
+    }
+    &:last-of-type {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+  }
+}
+
+
+// position button group icons on top of text on small viewports
+@media (max-width: $xs - 0.001) {
+  .button-group > .button > .button-icon {
+    display: block;
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+}
+
+
+// button icon
+.button-icon {
+  display: inline-block;
+  vertical-align: baseline;
+  top: 0.15em;
+  width: rem(14);
+  height: rem(14);
+  margin-right: 0.125em;
+}

@@ -1,0 +1,9 @@
+label: Category
+type: select
+width: 1/3
+options: field
+validate: alphanum
+field:
+  page: blog
+  name: categories
+  separator: ,

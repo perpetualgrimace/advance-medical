@@ -1,0 +1,13 @@
+type: structure
+modalsize: large
+style: table
+width: 1/3
+fields:
+  city:
+    label: City
+    type: text
+    width: 1/2
+  country:
+    label: Country
+    type: text
+    width: 1/2

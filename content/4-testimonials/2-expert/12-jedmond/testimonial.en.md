@@ -1,0 +1,31 @@
+Title: MD Edmond
+
+----
+
+Text: It is very satisfying to be able to provide a patient friendly opinion through advance medical, especially in a time when we are asked to see more patients with less resources. <br>
+
+Additionally, because our opinions are written instead of delivered verbally (like we do in clinic), the information has to be more organized and concise. This is allowed me to use some of my opinions as educational information for my patients.  Lastly, the advance medical team provides a succinct summary of the patients medical history, with easily navigated imaging.
+
+----
+
+Testimonee: Jane Edmond, MD
+
+----
+
+Credentials: Professor of ophthalmology and pediatrics, Baylor College of medicine, Texas Children's Hospital
+
+----
+
+Img: jedmond-avatar.jpg
+
+----
+
+Logo:
+
+----
+
+Category: expert
+
+----
+
+Featured: true

@@ -1,0 +1,26 @@
+title: Services
+pages: true
+  template:
+    - service
+files: true
+icon: shopping-cart
+
+fields:
+  # translations: translations
+  title: title
+  headline: headline
+  thumbImg:
+    extends: thumbImg
+    width: 1/2
+  heroImg: hero
+  description:
+    extends: description
+    width: 1
+  text: defaultText
+
+  ctaLine: ctaLine
+  ctaHelp: ctaHelp
+  cta: cta
+  ctaText: ctaText
+  ctaButton: ctaButton
+  ctaLink: ctaLink

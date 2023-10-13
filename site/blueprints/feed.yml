@@ -1,0 +1,12 @@
+title: Feed
+pages: false
+files: false
+hide: true
+deletable: false
+preview: false
+icon: rss-square
+
+fields:
+  # translations: translations
+  title:
+    label: Page title

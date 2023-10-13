@@ -1,0 +1,71 @@
+// sweet sticky footer via flexbox
+// https://philipwalton.github.io/solved-by-flexbox/demos/sticky-footer/
+
+@supports (flex-wrap: wrap) {
+  // Use body[class] to apply this to the real site, and not the Kirby pattern preview.
+  // (The real site will always have at least one class applied to the body,
+  // while the Kirby pattern preview will not)
+  body[class] {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+  main {
+    flex: 1;
+    z-index: 1; // position main content above background graphic (attached to header and footer)
+  }
+}
+
+// add padding to sections
+.section {
+  @include clearfix;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  z-index: 1; // position sections above footer bg img; IE bugfix
+}
+
+// resize figure images at smaller viewports
+// both of these selectors are needed (for cms and for manual specification)
+.content figure > img,
+.figure > img {
+  @media (max-width: $m - 0.001) {
+    margin-left: auto;
+    margin-right: auto;
+    width: 14rem;
+    max-width: 75%;
+    height: auto;
+  }
+}
+
+// fudge fullwidth back into place
+.g-8 .u-fullwidth {
+  @media (min-width: $m) {
+    left: 26.55%; // ¯\_(ツ)_/¯
+  }
+}
+.g-9 .u-fullwidth {
+  @media (min-width: $m) {
+    left: 17.4%; // ¯\_(ツ)_/¯
+  }
+}
+
+// columns
+@media (min-width: $xxs) {
+  .small-columns {
+    column-width: 7rem;
+    column-gap: $gutter * 1.5;
+  }
+  .columns {
+    columns: 2;
+    column-gap: $gutter * 1.5;
+  }
+
+  .column-group {
+    break-inside: avoid-column;
+
+    // fix margin offset
+    &:first-of-type > *:first-child {
+      margin-top: 0 !important;
+    }
+  }
+}

@@ -1,0 +1,4 @@
+label: Hero image (optional)
+type: image
+help: 'Recommended size: 1920px × 480px. Optimize at <a href="http://tinypng.org">tinypng.org</a> before uploading.'
+width: 1/2

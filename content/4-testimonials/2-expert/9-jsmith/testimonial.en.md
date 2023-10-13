@@ -1,0 +1,29 @@
+Title: MD Smith
+
+----
+
+Text: This is a responsible, well designed and well managed organization dedicated to helping those who want another set of eyes and need help understanding their disease or options at important points in their care.
+
+----
+
+Testimonee: Julia Smith, MD, PhD
+
+----
+
+Credentials: Clinical Director, Cancer Screening Program, Laura and Isaac Perlmutter Cancer Center,  NYU Medical Center, New York, New York
+
+----
+
+Img: jsmith-avatar.jpg
+
+----
+
+Logo:
+
+----
+
+Category: expert
+
+----
+
+Featured: true

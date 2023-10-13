@@ -1,0 +1,161 @@
+////////////////////////////////
+// refactor
+////////////////////////////////
+
+// default type
+html,
+.u-body-font {
+  @include body-font;
+}
+
+// bold type
+strong, b,
+button, input[type='button'],
+dt {
+  @include body-bold-font;
+}
+
+// italic type
+em, i {
+  @include body-italic-font;
+}
+
+// heading type
+.heading,
+.display,
+h1, h2, h3, h4, h5, h6 {
+  @include display-font;
+
+  // enforce intitial text
+  &:first-letter {
+    text-transform: uppercase;
+  }
+}
+
+
+// type size defaults
+h1 {
+  font-size: ($beta + $alpha) / 2;
+
+  @media (min-width: $m) {
+    font-size: $alpha;
+  }
+}
+h2           { font-size: $alpha;}
+h3           { font-size: $beta; }
+h4           { font-size: $gamma;}
+p, li        { font-size: $delta;}
+h5, h6,
+small, label { font-size: $milli;}
+
+
+// type size overrides
+.giga {
+  font-size: $beta;
+
+  @media (min-width: $xs) {
+    font-size: 5vw;
+  }
+  @media (min-width: $xl) {
+    font-size: $giga;
+  }
+}
+.alpha {
+  font-size: $beta;
+
+  @media (min-width: $m) {
+    font-size: $alpha;
+  }
+}
+h2,
+.beta  {
+  font-size: ($beta + $gamma) / 2;
+
+  @media (min-width: $s) {
+    font-size: $beta;
+  }
+
+  @media (min-width: $m) {
+    font-size: ($beta + $alpha) / 2;
+  }
+
+  @media (min-width: $l) {
+    font-size: $alpha;
+  }
+}
+p,
+.gamma,
+.gamma > p {
+  font-size: $gamma;
+
+  @media (max-width: $l - 0.001) {
+    font-size: $delta;
+  }
+}
+.delta,
+.delta > p {
+  font-size: $delta;
+}
+.milli,
+.milli > p  {
+  font-size: $milli;
+}
+
+li {
+  font-size: inherit;
+}
+
+
+// default line-height
+html {
+  line-height: 1.5;
+}
+
+// heading line-height
+h1, h2, h3, h4, h5, h6,
+.heading, .display {
+  line-height: 1.25;
+}
+
+
+////////////////////////////////
+// legacy
+////////////////////////////////
+.content {
+  // enforce some rules
+  h1:after {
+    @include pseudo;
+    content: 'alert: headings should be ## level 2 (or lower).';
+    color: red;
+  }
+  h2 {
+    font-size: $beta;
+  }
+  ol, ul, p {
+    font-size: $delta;
+  }
+}
+
+
+////////////////////////////////
+// legacy
+////////////////////////////////
+
+// Line breaks
+br {
+  @media (max-width: $m - 0.001) {
+    display: none;
+  }
+}
+
+footer br,
+table br,
+blockquote br,
+.legal br,
+.vertical-list br {
+  display: block; // always be breaking
+}
+
+br + br {
+  display: none; // in case consecutive <br> tags sneak onto a page, hide all but the first
+}

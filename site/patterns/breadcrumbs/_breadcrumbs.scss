@@ -1,0 +1,62 @@
+////////////////////////////////
+// breadcrumbs
+////////////////////////////////
+
+.breadcrumbs-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  margin-top: 0;
+  max-height: 2.5rem;
+  background: rgba($secondary-color, 0.6);
+  overflow: hidden;
+}
+
+.breadcrumbs-list {
+  max-height: 2.5rem;
+}
+
+.breadcrumbs-item {
+  padding-right: 1rem;
+}
+
+.breadcrumbs-item:not(:last-of-type):after {
+  @include pseudo;
+  font-size: $milli;
+  position: absolute;
+  top: 0;
+  right: 0.325rem;
+  line-height: 2.25rem;
+  content: ' / ';
+  display: inline-block;
+}
+
+.breadcrumbs-link {
+  display: block;
+  line-height: 2.25rem;
+  padding-bottom: 0.25em;
+  max-width: 12rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  &.is-active-pg {
+    opacity: 1;
+  }
+
+  &:hover, &:focus, &:active {
+    color: $white;
+  }
+}
+
+////////////////////////////////
+// patterns notification
+////////////////////////////////
+// only patterns pages have no body class
+body:not([class]) .breadcrumbs:before {
+  display: block;
+  padding: $gutter;
+  content: 'This pattern can be used in templates, but the preview for this pattern is unavailable.';
+}

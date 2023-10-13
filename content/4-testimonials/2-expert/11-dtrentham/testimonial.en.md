@@ -1,0 +1,25 @@
+Title: MD Trentham
+
+----
+
+Text: Advance Medical offers patients the opportunity to readily receive consultative advice from highly expert subspecialists. This avenue may be especially valuable to patients residing in locales where it is difficult to access locally second medical opinions.
+
+----
+
+Testimonee: David Trentham, MD
+
+----
+
+Credentials: Associate Professor of Medicine,  Former Chief of Rheumatology,  Beth Israel Deaconess Medical Center, Harvard Medical School
+
+----
+
+Img: dtrentham-avatar.jpg
+
+----
+
+Logo:
+
+----
+
+Category: expert

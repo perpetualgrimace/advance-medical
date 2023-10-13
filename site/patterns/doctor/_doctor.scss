@@ -1,0 +1,93 @@
+////////////////////////////////
+// doctor-list snippet
+////////////////////////////////
+
+.doctor-list {
+  overflow-x: scroll;
+  white-space: nowrap;
+}
+
+// add overflow shadow effect, courtesy of David Bushell
+// http://dbushell.com/2016/03/04/css-only-responsive-tables/
+// http://codepen.io/dbushell/pen/wGaamR
+
+.doctor-list {
+  // optional - enable iOS momentum scrolling
+  -webkit-overflow-scrolling: touch;
+
+  // scrolling shadows
+  background: -webkit-radial-gradient(left, ellipse, $shadow 0%, transparent 75%) 0 center,
+              -webkit-radial-gradient(right, ellipse, $shadow 0%, transparent 75%) 100% center;
+  background: radial-gradient(left, ellipse, $shadow 0%, transparent 75%) 0 center,
+              radial-gradient(right, ellipse, $shadow 0%, transparent 75%) 100% center;
+  background-size: 10px 100%, 0.25rem 100%;
+  background-attachment: scroll, scroll;
+  background-repeat: no-repeat;
+}
+
+// change these gradients from white to your background colour if it differs
+// gradient on the first cells to hide the left shadow
+.doctor-item:first-of-type,
+.doctor-item:last-of-type {
+  background-repeat: no-repeat;
+  background-size: 1rem 100%;
+}
+
+.doctor-item:first-of-type {
+  background-image: linear-gradient(to right, $white 50%, rgba($black, 0) 100%);
+}
+
+// gradient on the last cells to hide the right shadow
+.doctor-item:last-of-type {
+  background-image: linear-gradient(to left, $white 50%, rgba($black, 0) 100%);
+  background-position: 100% 0;
+}
+
+////////////////////////////////
+// doctor pattern
+////////////////////////////////
+
+.doctor-item {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  width: 8rem;
+  width: max-content;
+  min-height: 11rem; // fudged to block shadow
+  display: inline-block;
+  vertical-align: top;
+  white-space: normal;
+
+  & + & {
+    margin-left: 2%;
+  }
+}
+
+.doctor-img-container {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: $light-white;
+}
+
+// bugfix: redundant border radius is redundant,
+// but chrome+opera aren't honoring overflow: hidden on the parent
+.doctor-img {
+  border-radius: 50%;
+}
+
+.doctor-figcaption {
+
+  &,
+  > * {
+    max-width: 100%;
+    display: block;
+    white-space: normal;
+  }
+}
+
+.doctor-caption {
+  font-size: 0.325em;
+  margin-top: 0.5em;
+  max-width: 8rem;
+}

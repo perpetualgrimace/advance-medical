@@ -1,0 +1,25 @@
+Title: MD Reiss
+
+----
+
+Text: Advanced Medical allows patients to seek advice for sometimes complex problems from experts throughout the country without leaving home. As an expert reviewing these cases I hope I have and will continue to offer insights that make an important and lasting change toward answering the patients questions and helping them get directed care for their complex problems.
+
+----
+
+Testimonee: Craig Reiss MD, FACC
+
+----
+
+Credentials: Division Chief of Cardiovascular Medicine at the St. Luke's Hospital Heart and Vascular Institute in Chesterfield, MO an affiliate with Cleveland Clinics Sydell and Arnold Miller Family Heart and Vascular Institute Professor of Clinical Medicine in the Department of Medicine at Washington University School of Medicine
+
+----
+
+Img: creiss-avatar.jpg
+
+----
+
+Logo:
+
+----
+
+Category: expert

@@ -1,0 +1,55 @@
+title: Career
+pages: false
+files: true
+icon: briefcase
+
+fields:
+  # translations: translations
+  title:
+    extends: title
+    width:
+    help: The title field in this template is mostly for reference in the panel; the position field will be used on the site.
+  position:
+    extends: category
+    label: Job title
+    width: 1/3
+    field:
+      page: careers
+      name: positions
+      separator: ,
+  location:
+    extends: category
+    label: Location
+    default: Boston, USA
+    width: 1/3
+    field:
+      page: careers
+      name: locations
+      separator: ;
+  hours:
+    extends: category
+    label: Hours
+    width: 1/3
+    field:
+      page: careers
+      name: hours
+      separator: ,
+  text:
+    extends: defaultText
+    default: >
+      ## Overview
+
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi voluptates inventore dolorem sed dolores voluptas voluptate qui, mollitia perspiciatis corporis, voluptatem ratione distinctio? Facere consectetur ipsa explicabo, sit nesciunt modi.
+
+      ## Responsibilities
+
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi voluptates inventore dolorem sed dolores voluptas voluptate qui, mollitia perspiciatis corporis, voluptatem ratione distinctio? Facere consectetur ipsa explicabo, sit nesciunt modi.
+
+      ## Qualifications
+
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi voluptates inventore dolorem sed dolores voluptas voluptate qui, mollitia perspiciatis corporis, voluptatem ratione distinctio? Facere consectetur ipsa explicabo, sit nesciunt modi.
+
+  ctaHeading:
+    label: CTA heading
+    help: "Shown with geographically related careers. Note: the (page: location) part grabs the location value above."
+    default: "More careers in (page: location):"

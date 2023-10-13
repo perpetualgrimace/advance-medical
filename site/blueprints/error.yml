@@ -1,0 +1,14 @@
+title: Error
+pages: false
+files: false
+icon: exclamation-triangle
+deletable: false
+
+fields:
+  # translations: translations
+  headline: headline
+  text:
+    extends: defaultText
+    help: This message is shown when a user encounters a bad link
+  searchPlaceholder:
+    label: Search bar placeholder text

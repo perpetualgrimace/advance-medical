@@ -1,0 +1,29 @@
+title: Testimonial
+pages: false
+files: true
+preview: false
+icon: quote-right
+
+
+fields:
+  # translations: translations
+  title: title
+  testimonee:
+    label: The author of the quote
+    help: 'Note: please leave out the dash'
+    width: 2/3
+
+  text:
+    label: The quote
+    type: markdown
+    toolbar: false
+  credentials:
+    label: Author credentials, comma separated
+    type: markdown
+    toolbar: false
+    help: 'Note: if no credentials are provided here, the category's default credentials will be used'
+
+  img: avatarImg
+  backgroundImg: testimonialImg
+
+  # logo: testimonialLogo

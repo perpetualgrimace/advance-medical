@@ -1,0 +1,89 @@
+Title: About
+
+----
+
+Text:
+
+## Our mission
+
+We work with organizations who care about their people and want to help as many as possible when they face difficult medical decisions.
+
+----
+
+Forgotten:
+
+## Our company at a glance
+
+Advance Medical is the global leader in Expert Medical Opinions.
+
+• Founded in 1999
+
+• 800 dedicated health professionals
+
+• 450 medical doctors on staff
+
+• 194 countries served
+
+• 20+ languages spoken
+
+• 35 million people with access to services
+
+• 330 company partnerships
+
+(link: expertise/services text: our services class: button)
+
+----
+
+Access:
+
+## Our custom solutions
+
+We build stronger relationships with doctors. You build stronger relationships with your people.
+
+Created for enterprise organizations, Advance Medical is simple to implement, offers customized programs to fit your care management needs, and is available to consult on policy, resources, and individual cases.
+
+What we do works, and has been proven in enterprise organizations worldwide since 1999.
+
+----
+
+Who:
+
+----
+
+Cta: Careers at Advance Medical
+
+----
+
+Ctatext: For doctors and healthcare workers who value patient care above all, consider a career at Advance Medical.
+
+----
+
+Ctabutton: Join us
+
+----
+
+Ctalink: careers
+
+----
+
+Headline:
+
+----
+
+Textcaption:
+
+----
+
+Forgottencaption: Patients immediately forget 40% to 80% of medical information shared with them
+
+----
+
+Accesscaption:
+
+----
+
+Whocaption:
+
+----
+
+heroImg: about-hero.jpg

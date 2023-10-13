@@ -1,0 +1,7 @@
+label: Testimonial
+type: select
+options: query
+query:
+  page: testimonials
+  fetch: grandchildren
+  text: '{{category}}: {{title}}'

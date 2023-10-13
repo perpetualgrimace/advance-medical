@@ -1,0 +1,17 @@
+title: Author list
+pages: true
+  template: author
+files: true
+icon: users
+deletable: false
+options:
+  template: false
+  url: false
+  status: false
+
+fields:
+  title: title
+  defaultCredentials:
+    label: Default credentials
+    help: Will be used for any authors without explicit credentials
+    width: 2/3

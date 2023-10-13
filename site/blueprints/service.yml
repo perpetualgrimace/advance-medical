@@ -1,0 +1,28 @@
+title: Service info page
+pages: false
+files: true
+icon: shopping-bag
+options:
+  delete: false
+
+fields:
+  # translations: translations
+  title: title
+  headline: headline
+  thumbImg:
+    extends: thumbImg
+    width: 1/2
+  heroImg: hero
+  description:
+    extends: description
+    width: 1
+  text: defaultText
+  processes: serviceProcesses
+  categories: serviceCategories
+
+  ctaLine: ctaLine
+  ctaHelp: ctaHelp
+  cta: cta
+  ctaText: ctaText
+  ctaButton: ctaButton
+  ctaLink: ctaLink

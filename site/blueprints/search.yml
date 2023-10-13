@@ -1,0 +1,26 @@
+title: Search
+pages: false
+files: false
+deletable: false
+icon: search
+
+fields:
+  # translations: translations
+  title: title
+  heroImg:
+    extends: hero
+    width: 2/3
+  text:
+    label: Error text
+    help: This is shown when no results are found
+    type: markdown
+    header1: h3
+    header2: h4
+  searchPlaceholder:
+    label: Search bar placeholder text
+    width: 1/2
+  searchButton:
+    label: Search bar button text
+    width: 1/2
+    validate:
+      maxWords: 2

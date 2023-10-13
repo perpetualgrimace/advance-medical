@@ -1,0 +1,24 @@
+title: Expertise on Demand
+pages: true
+  template:
+    - expertise-child
+files: true
+icon: ambulance
+options:
+  template: false
+
+fields:
+  # translations: translations
+  title: title
+  headline: headline
+  heroImg:
+    extends: hero
+    width: 1
+  text: defaultText
+
+  ctaLine: ctaLine
+  ctaHelp: ctaHelp
+  cta: cta
+  ctaText: ctaText
+  ctaButton: ctaButton
+  ctaLink: ctaLink

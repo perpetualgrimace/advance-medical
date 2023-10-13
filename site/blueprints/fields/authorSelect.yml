@@ -1,0 +1,6 @@
+label: Select author
+type: select
+width: 1/3
+options: query
+query:
+  page: authors

@@ -1,0 +1,25 @@
+Title: MD Aroesty
+
+----
+
+Text: My most important input occurs when the advice that has been given the patient seeking a second opinion is not in line with current best practice recommendations.
+
+----
+
+Testimonee: Julian Aroesty, MD
+
+----
+
+Credentials: Associate Clinical Professor of Medicine,  Harvard Medical School,  Boston, MA
+
+----
+
+Img: jaroesty-avatar.jpg
+
+----
+
+Logo:
+
+----
+
+Category: expert

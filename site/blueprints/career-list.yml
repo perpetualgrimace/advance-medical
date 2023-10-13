@@ -1,0 +1,64 @@
+title: Career list
+pages: true
+  template: career
+files: true
+icon: briefcase
+options:
+  template: false
+
+fields:
+  # translations: translations
+  title: title
+  headline: headline
+  heroImg:
+    extends: hero
+    width: 1
+
+  #fragment1:
+  #  label: Sentence fragment 1
+  #  width: 1/4
+  #positionLabel:
+  #  label: Label for profession list
+  #  width: 1/4
+  # fragment2:
+  #   label: Sentence fragment 2
+  #   width: 1/4
+  #locationLabel:
+  #  label: Label for location list
+  #  width: 1/2
+  locationLabel:
+    label: Label for location list
+    width: 1/2
+  searchText:
+    label: Search bar placeholder text
+    width: 1/2
+  positions:
+    label: List of job titles
+    type: markdown
+    toolbar: hide
+    help: include a comma after each job title
+    width: 1/3
+  locations:
+    label: List of locations
+    type: markdown
+    toolbar: hide
+    help: include a semicolon after each location
+    width: 1/3
+  hours:
+    label: List of hour requirements
+    type: markdown
+    toolbar: hide
+    help: include a comma after each hour requirement
+    width: 1/3
+  applyButton:
+    label: Apply button text
+    help: Used on career pages
+    width: 1/3
+  moreLink:
+    label: More link
+    help: Used by career cards
+    width: 1/3
+  moreButton:
+    label: More careers button text
+    help: For home page, currently unused
+    width: 1/3

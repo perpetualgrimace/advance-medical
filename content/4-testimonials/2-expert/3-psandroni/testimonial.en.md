@@ -1,0 +1,31 @@
+Title: MD Sandroni
+
+----
+
+Text: It is a great idea for people looking for a second opinion at a fraction of the cost they'd incur in a face to face. The reports are nicely organized, making it easy to review.  Lastly, payments are made promptly.
+
+----
+
+Testimonee: Paola Sandroni, MD, PhD
+
+----
+
+Credentials: Professor of Neurology, Mayo Clinic College of Medicine
+
+Director, Autonomic Laboratory, Department of Neurology, Mayo Clinic, Rochester, MN
+
+----
+
+Img: psandroni-avatar.jpg
+
+----
+
+Logo:
+
+----
+
+Category: expert
+
+----
+
+Featured: true

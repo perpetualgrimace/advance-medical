@@ -1,0 +1,130 @@
+////////////////////////////////
+// colors
+////////////////////////////////
+
+// brand palette
+$brand-color:     #007FD0;
+$light-brand-color: #0092ef;
+$secondary-color: #002A54;
+
+// expanded palette
+$jade-color: #01A37A;
+$dark-jade-color: #006344;
+
+$sushi-color: #A4BF42;
+$dark-sushi-color: #6E8702;
+
+$tulip-color: #EEB035;
+$dark-tulip-color: #BB7400;
+
+$punch-color: #DB4C1F;
+$dark-punch-color: #B22E00;
+
+$cerise-color: #D6295F;
+$dark-cerise-color: #831945;
+
+$wisteria-color: #9B50AD;
+$dark-wisteria-color: #592B68;
+
+// blog content colors
+$article-color: $tulip-color;
+$video-color: $cerise-color;
+$release-color: $wisteria-color;
+
+// testimonial colors
+$participant-color: $tulip-color;
+$client-color: $punch-color;
+$expert-color: $jade-color;
+$physician-color: $wisteria-color;
+
+// ui
+$success-color:   $jade-color;
+$warning-color:   $tulip-color;
+$error-color:     $punch-color;
+
+// whites and blacks
+$black:   #272423;
+$dark-2:  #464241;
+$dark-1:  #6B6766;
+$gray:    #908D8C;
+$light-2: #B5B3B2;
+$light-1: #DAD9D8;
+$light-white: #F7F6F6;
+$white:   #ffffff;
+
+// shadow
+$shadow:          rgba($black, 0.15);
+$shadow-dark:     rgba($black, 0.50);
+
+// social media colors
+$facebook-color:  #3b5998;
+$twitter-color:   #00aced;
+$linkedin-color:  #0077B5;
+$google-color:    #DD4B39;
+$instagram-color: #e4405f;
+
+
+////////////////////////////////
+// font sizes
+////////////////////////////////
+
+$giga:    3.2rem;  // 64px
+$alpha:   2.2rem;  // 44px
+$beta:    1.6rem;  // 32px
+$gamma:   1.3rem;  // 24px
+$delta:   1.0rem;  // 20px
+$epsilon: 0.85rem; // use sparingly!
+$milli:   0.7rem;  // 14px
+
+
+////////////////////////////////
+// breakpoints
+////////////////////////////////
+
+// t-shirt sizing ftw
+$xxs:  20em;
+$xs:   30em;
+$s:    40em;
+$m:    56em;
+$l:    64em;
+$xl:   80em;
+$xxl:  90em;
+$xxxl: 100em;
+
+
+////////////////////////////////
+// miscellaneous measurements
+////////////////////////////////
+
+// border
+$border-width:       4px;
+$border-width-thin:  1px;
+$border-width-thick: 0.25em;
+
+// border radius
+$radius: 4px;
+$radius-small: 2px;
+
+// used by _jf-grid.scss
+$gutter: 1rem;
+$max-container-width: 60rem;
+
+// used by _nav.scss
+$nav-height: 3rem; // 60px
+$logo-height: 1.1rem; // 22px
+$logo-width: 8.95rem; // 179px
+
+// used by _cards.scss
+$thumb-width: 18rem;
+$thumb-height: 10.1rem;
+
+
+////////////////////////////////
+// motion
+////////////////////////////////
+
+$easing: cubic-bezier(0.65, 0.10, 0.65, 0.85);
+
+$timing: 0.25s $easing;
+$timing-quick: 0.125s $easing;
+$timing-long: 0.5s $easing;

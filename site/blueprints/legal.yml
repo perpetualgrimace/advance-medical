@@ -1,0 +1,19 @@
+title: Legal
+pages: false
+files: true
+icon: gavel
+
+fields:
+  # translations: translations
+  title: title
+  heroImg:
+    extends: hero
+    width: 2/3
+  text: defaultText
+
+  ctaLine: ctaLine
+  ctaHelp: ctaHelp
+  cta: cta
+  ctaText: ctaText
+  ctaButton: ctaButton
+  ctaLink: ctaLink

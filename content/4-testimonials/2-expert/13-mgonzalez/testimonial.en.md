@@ -1,0 +1,25 @@
+Title: MD Gonzalez
+
+----
+
+Text: I feel that we can help patients understand their medical condition and the treatment options they have.
+
+----
+
+Testimonee: Mario Gonzalez, MD
+
+----
+
+Credentials: Professor of Medicine  Director, Clinical Electrophysiology  Penn State University
+
+----
+
+Img: mgonzalez-avatar.jpg
+
+----
+
+Logo:
+
+----
+
+Category: expert

@@ -1,0 +1,54 @@
+// container positioning
+// maintain SVG proportions in IE
+@media all and (-ms-high-contrast:none) {
+  // IE 11
+  *::-ms-backdrop, .contact-map-container > img {
+    height: 10%; // fudged 🤷‍
+  }
+}
+
+// dots
+.contact-locations {
+  position: absolute;
+  margin-top: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+}
+
+
+// .is-active / :target dot
+.no-js .contact-location-dot:target,
+.contact-location-dot.is-active {
+  transform: scale(1.5);
+  transform-origin: 50% 50%;
+  fill: $brand-color;
+}
+
+
+// cursor, active colors
+.contact-link {
+  cursor: s-resize;
+
+  @media (min-width: $m) {
+    cursor: e-resize;
+  }
+
+  &.is-active {
+    background: $secondary-color;
+    color: $white;
+  }
+}
+
+.contact-location-dot {
+  cursor: n-resize;
+
+  @media (min-width: $m) {
+    cursor: w-resize;
+  }
+
+  &:hover {
+    fill: $light-brand-color;
+  }
+}

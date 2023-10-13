@@ -1,0 +1,53 @@
+title: Site
+deletable: false
+pages:
+  template:
+    - default
+    - legal
+
+fields:
+  # translations: translations
+  title:
+    label: Site title
+    type:  text
+    width: 1/3
+  description:
+    extends: description
+    width: 2/3
+  keywords:
+    label: Keywords
+    type:  tags
+    width: 1/2
+  dropdownable:
+    label: Pages with dropdown menus
+    type: checkboxes
+    options: visibleChildren
+    width: 1/2
+  languageSelect:
+    label: Language select text
+    help: Accessiblity detail. Prompts screen reader users to choose a language.
+    width: 1/2
+  skipLink:
+    label: Skip link text
+    help: "Accessiblity detail. The skip link is used by screen readers and keyboard users to skip past navigation. For more info, see: http://a11yproject.com/posts/skip-nav-links/"
+    width: 1/2
+  currentPage:
+    label: Current page text
+    help: Accessibility detail. Notifies screen reader users of the current page within navigation.
+    width: 1/2
+  footerNavHeading:
+    label: Footer nav heading
+    help: Displays above the sitemap in the footer
+    width: 1/2
+
+
+  ctaHelp:
+    extends: ctaHelp
+    text: <h1>Default Call to Action</h1>
+  cta: cta
+  ctaText: ctaText
+  ctaButton: ctaButton
+  ctaLink: ctaLink
+
+  copyright:
+    label: Copyright

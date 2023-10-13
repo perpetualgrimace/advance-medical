@@ -1,0 +1,31 @@
+type: structure
+modalsize: large
+style: table
+fields:
+  city:
+    label: City
+    type: text
+    width: 1/2
+  country:
+    label: Country
+    type: text
+    width: 1/2
+  address1:
+    label: Address line 1
+    type: text
+    width: 1/2
+  address2:
+    label: Address line 2
+    type: text
+    width: 1/2
+  phone:
+    label: Phone number
+    type: text
+    width: 1/2
+  email:
+    label: Email address
+    type: text
+    width: 1/2
+    default: contact@advance-medical.net
+    validate: email
+    required: true

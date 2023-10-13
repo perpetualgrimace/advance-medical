@@ -1,0 +1,22 @@
+title: Author
+pages: false
+files: true
+preview: false
+icon: user
+options:
+  status: false
+  url: false
+
+
+fields:
+  # translations: translations
+  title: title
+    extends: title
+    label: Author name
+    width: 1/2
+  img: avatarImg
+  credentials:
+    label: Credentials
+    default: Physician Case Manager, Advance Medical
+    type: markdown
+    toolbar: false

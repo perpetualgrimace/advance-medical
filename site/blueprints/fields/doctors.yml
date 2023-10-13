@@ -1,0 +1,16 @@
+type: structure
+modalsize: large
+style: table
+fields:
+  name:
+    label: Doctor name
+    type: text
+  img:
+    label: Image
+    type: image
+    help: >
+      <p><strong>First, upload a 280px &times; 280px jpg to the page.</strong> It can then be selected above.<br>Note: image file size must be under 21kb. Compress it at <a href="http://tinypng.org">tinypng.org</a> before uploading.</p>
+  caption:
+    label: Caption
+    type: markdown
+    toolbar: false

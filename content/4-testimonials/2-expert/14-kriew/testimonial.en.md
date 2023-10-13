@@ -1,0 +1,25 @@
+Title: MD Riew
+
+----
+
+Text: Advance Medical and Expert Medical Opinion allows patients from all over the world an opportunity to obtain second opinons from some of the leading experts in the field. From the consultant's perspective, we have an opportunity to help patients from all over the world and to render opinions on some very interesting and/or complex cases.
+
+----
+
+Testimonee: K. Daniel Riew, MD
+
+----
+
+Credentials: Professor of Orthopedic Surgery, Columbia University, Chief, Cervical Spine Surgery & Co-Director, Spine Division, Co-Director, Columbia University, Spine Fellowship,  Department of Orthopedic Surgery
+
+----
+
+Img: kriew-avatar.jpg
+
+----
+
+Logo:
+
+----
+
+Category: expert

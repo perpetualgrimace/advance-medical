@@ -1,0 +1,262 @@
+////////////////////////////////
+// global
+////////////////////////////////
+
+// main container
+.header {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  height: 35vh;
+  min-height: 6rem;
+  min-height: calc(3rem + 15vw);
+  margin-top: $nav-height;
+
+  h1, p {
+    @include text-shadow;
+  }
+}
+
+// row
+.header > .g-container {
+  z-index: 2;
+}
+
+.header-headline {
+  left: -0.075em; // fudge alignment for big text
+  top: -0.3rem; // fudge vertical placement
+}
+
+// hero image container
+.hero {
+  @include inflate;
+  background-size: cover;
+  background-position: center;
+  background-color: $light-1;
+  opacity: 0.25;
+  /*
+  @supports(mix-blend-mode: soft-light) {
+    mix-blend-mode: soft-light;
+    opacity: 0.75;
+  }
+  */
+}
+
+
+
+////////////////////////////////
+// default visual treatment
+////////////////////////////////
+
+// background gradient
+.default-header {
+  background-image: radial-gradient(circle at 25% 10%, rgba($brand-color, 0.66) 0, $secondary-color 90%);
+
+  @media (min-width: $m) {
+    background-image: radial-gradient(circle at 20% -10%, rgba($brand-color, 0.75) 0, $secondary-color 66%);
+  }
+}
+
+// default-header
+.default-header {
+  @media (max-width: $l - 0.001) {
+    max-height: 14rem;
+  }
+}
+
+
+////////////////////////////////
+// home header
+////////////////////////////////
+
+// home header
+.home-header {
+  min-height: 20rem;
+  padding-bottom: 1rem;
+  overflow: hidden;
+
+  @media (min-aspect-ratio: 4/3) {
+    height: 100vh;
+    height: calc(100vh - #{$nav-height});
+  }
+
+  // graphic placement (as background-image)
+  &:before {
+    @include network-graphic;
+    top: 0;
+    z-index: 2;
+  }
+}
+
+
+// home button
+.home-hero-text p:last-of-type {
+  // add shadow
+  > .button {
+    @include box-shadow($shadow);
+
+    &:hover {
+      @include box-shadow-lg;
+    }
+  }
+  // hide on small screens
+  @media (max-width: $xs - 0.001) {
+    display: none;
+  }
+}
+
+
+// fake cover
+// previously .home-video-container
+.home-slideshow-container {
+  margin-top: -1px !important; // cover up the subpixel tearing
+  position: absolute;
+  bottom: 0;
+  left: 0; // needed by some browsers; Safari / IE bugfix
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1;
+}
+
+// previously .home-video
+.home-slideshow-img {
+  position: absolute;
+  display: flex;
+  min-width: 100%;
+  min-height: 100%;
+  width: 100%;
+  height: auto;
+  margin: auto;
+  z-index: 0;
+  opacity: 0;
+
+  @media (max-width: $s) {
+    min-width: 100%;
+    max-width: none;
+    width: auto;
+    height: 100%;
+  }
+
+
+  &:nth-of-type(4n+1) {
+    transform-origin: 75% 50%;
+  }
+  &:nth-of-type(4n+2) {
+    transform-origin: 25% 100%;
+  }
+  &:nth-of-type(4n+3) {
+    transform-origin: 25% 75%;
+  }
+  &:nth-of-type(4n+4) {
+    transform-origin: 25% 25%;
+  }
+}
+
+// hide following images
+.home-slideshow-img.is-ken-burnsing:first-of-type + .home-slideshow-img ~ .home-slideshow-img {
+  z-index: -1;
+}
+
+.home-slideshow-img.is-ken-burnsing {
+  opacity: 1;
+  transform: scale(1.15);
+}
+
+
+
+
+.home-headline {
+  display: inline;
+}
+
+
+////////////////////////////////
+// header graphic
+////////////////////////////////
+
+.header-graphic-container {
+  width: 100%;
+  height: 100vh;
+  min-height: 500px; // fallback for 100vh -- 100% arbitrary
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.25;
+  z-index: 0;
+  perspective: 1000px;
+  transform: scale(1.1);
+}
+
+.header-graphic-svg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 125%;
+  max-width: none;
+  height: auto;
+
+  @media (min-width: $s) {
+    width: 100%;
+  }
+}
+
+
+////////////////////////////////
+// l1-header
+////////////////////////////////
+/*
+.l1-header {
+  height: 45vh;
+
+  .header-headline {
+    margin-top: -1rem;
+  }
+}
+*/
+
+
+////////////////////////////////
+// career header
+////////////////////////////////
+
+.header-meta-item {
+  &:not(:last-of-type) {
+    margin-right: 2em;
+  }
+}
+
+.career-header-icon {
+  width: 0.85rem;
+  height: 0.85rem;
+  display: inline-block;
+  vertical-align: middle;
+  top: -0.15em;
+}
+
+.career-header-icon-location {
+  left: -0.05em;
+}
+
+.career-header-icon-hours {
+  margin-right: 0.3em;
+}
+
+
+////////////////////////////////
+// positioning exceptions
+////////////////////////////////
+
+.testimonial-list .hero,
+.contact .hero {
+  background-position: 50% 0;
+}
+
+.enterprise .hero,
+.services .hero {
+  background-position: 50% 25%;
+}
+
+.virtual-medical-homes .hero {
+  background-position: 25% 12.5%;
+}

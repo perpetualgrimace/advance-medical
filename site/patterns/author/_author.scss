@@ -1,0 +1,42 @@
+// copied from testimonial.scss
+
+.author-container {
+  border-radius: $radius;
+  background: $light-white;
+}
+
+.author-img,
+.author-info {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+// avatar
+.author-img {
+  margin-right: 1rem;
+  width: rem(100);
+  height: rem(100);
+  max-width: 100%;
+  background: $gray; // before images load
+  border-radius: 50%;
+
+  @media (max-width: $m - 0.001) {
+    height: auto;
+  }
+}
+
+// name and title
+.author-info {
+  margin-top: 0;
+  width: calc(100% - 8rem);
+}
+
+.author-name {
+  font-size: $epsilon;
+}
+
+.author-credentials {
+  display: block;
+  font-size: $milli;
+  opacity: 0.6666;
+}

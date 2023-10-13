@@ -1,0 +1,19 @@
+title: Testimonial list
+pages: true
+  template: testimonial
+icon: quote-left
+deletable: false
+options:
+  template: false
+  url: false
+  status: false
+
+fields:
+  # translations: translations
+  categoryLabel:
+    label: Label for category list
+    width: 1/2
+  heroImg: hero
+  # searchText:
+  #   label: Search bar placeholder text
+  #   width: 1/2

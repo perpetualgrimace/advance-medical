@@ -1,0 +1,25 @@
+Title: MD Klein
+
+----
+
+Text: Being a consulting expert with Advance Medical allows me to reach out to more people and help answer their questions.
+
+----
+
+Testimonee: Liviu Klein, MD
+
+----
+
+Credentials: Director, Mechanical Circulatory Support and Heart Failure Device Programs, Associate Professor of Medicine  Division of Cardiology,  University of California San Francisco
+
+----
+
+Img: lklein-avatar.jpg
+
+----
+
+Logo:
+
+----
+
+Category: expert

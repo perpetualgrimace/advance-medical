@@ -1,0 +1,30 @@
+.contact-info-group {
+  background: $light-white;
+  padding: $gutter * 1.5 !important;
+}
+
+.contact-info-item {
+  line-height: 1rem; // reset for children
+}
+
+.contact-info-icon,
+.contact-info-link {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.contact-info-icon {
+  width: rem(17);
+  height: rem(17);
+  top: -0.1rem;
+  left: 0;
+}
+
+.contact-info-link {
+  margin-top: -0.25rem;
+  width: calc(100% - #{rem(30)})
+}
+
+p.contact-info-link {
+  margin-left: 0.25rem; // Can't figure out why this is different from a.contact-info-link 🤷‍
+}

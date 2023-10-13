@@ -1,0 +1,4 @@
+label: Testimonial logo (optional)
+type: image
+width: 1/2
+help: 'Recommended width: 100px. An svg is ideal, but jpg or png will work as well. Optimize at <a href="http://tinypng.org">tinypng.org</a> before uploading.'

@@ -1,0 +1,7 @@
+label: Description
+type: markdown
+toolbar: hide
+help: A short teaser for the page. Used by parent page. Also useful for SEO and sharing purposes. 25 word limit.
+width: 2/3
+validate:
+  maxWords: 25

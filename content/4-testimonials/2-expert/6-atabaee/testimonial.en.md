@@ -1,0 +1,29 @@
+Title: MD Tabaee
+
+----
+
+Text: The opportunity to provide expert consultation for patients across the country while working with the professional team at Advance Medical is a true privilege.
+
+----
+
+Testimonee: Abtin Tabaee, MD
+
+----
+
+Credentials: Associate Professor of Otolaryngology  Weill Cornell Medicine,  New York, NY
+
+----
+
+Img: atabaee-avatar.jpg
+
+----
+
+Logo:
+
+----
+
+Featured: true
+
+----
+
+Category: expert

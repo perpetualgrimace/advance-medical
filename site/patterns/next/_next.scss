@@ -1,0 +1,32 @@
+////////////////////////////////
+// big ol' next button
+////////////////////////////////
+
+// container
+// offset card grid padding 😒💩
+.nextprev-prev .card-container,
+.nextprev-next .card-container {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+// big ol' link
+.next-link {
+  display: block;
+  z-index: 1;
+
+  // absolutely position series label if it is a child of .next-link
+  .series-label {
+    position: absolute;
+    top: -2.5rem;
+  }
+}
+.next-img {
+  @include inflate;
+  background-size: cover;
+  background-position: center;
+}
+
+// interactions
+.next-link {
+}
