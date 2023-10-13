@@ -13,7 +13,8 @@ if ($item->thumbImg() != '') {
 if ($item->description() != '') {
   $teaserText = $item->description();
 } else {
-  $teaserText = $item->text()->excerpt($length = 20, $mode = 'words');
+  // TODO: replace with chopper $teaserText = $item->text()->excerpt($length = 20, $mode = 'words');
+  $teaserText = $item->text();
 }
 
 ?>

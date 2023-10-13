@@ -21,7 +21,7 @@ if ($page->category() != '') {
     <li class="share-item">
       <?php snippet('svg-img', array('filename' => 'icons/twitter', 'class' => 'share-img')) ?>
       <a class="share share-twitter milli" target="_blank"
-        href="https://twitter.com/share?url=<?= $page->url() ?>&text=<?= excerpt($page->title(), 60) ?>&via=<?= $pages->find('contact')->twitter() ?>&hashtags=<?= $category ?>">
+        href="https://twitter.com/share?url=<?= $page->url() ?>&text=<? /* TODO: replace with chopper = excerpt($page->title(), 60) */ echo $page->title() ?>&via=<?= $pages->find('contact')->twitter() ?>&hashtags=<?= $category ?>">
           Twitter
       </a>
     </li>

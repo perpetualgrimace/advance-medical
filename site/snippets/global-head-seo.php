@@ -28,7 +28,8 @@ if($page->description() != '') {
 if($page->description() != '') {
   $shareDescription = $page->description();
 } elseif($page->text() != '') {
-  $shareDescription = excerpt($page->text(), '140');
+  // TODO: replace with chopper $shareDescription = excerpt($page->text(), '140');
+  $shareDescription = $page->text();
 } else { $shareDescription = NULL; }
 
 
