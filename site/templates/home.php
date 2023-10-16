@@ -12,7 +12,7 @@ snippet('global-body-open');
   // page title
   snippet('global-main-open');
     snippet('home-header');
-    snippet('scroll-indicator');
+    snippet('scroll-indicator', ['target' => 'intro']);
 
     // intro block
     snippet('global-section-open', ['id' => 'intro']);
