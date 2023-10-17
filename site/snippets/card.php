@@ -41,11 +41,7 @@
   }
 
   // get layout
-  if($cardLayout != '') {
-    $cardLayout = $cardLayout;
-  } else {
-    $cardLayout = '';
-  }
+  $cardLayout = $cardLayout ?? "";
 
 ?>
 

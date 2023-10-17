@@ -30,7 +30,7 @@ Advance Medical is the global leader in Expert Medical Opinions.
 
 • 330 company partnerships
 
-(link: expertise/services text: our services class: button)
+(link: services text: our services class: button)
 
 ----
 

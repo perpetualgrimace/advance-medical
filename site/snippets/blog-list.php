@@ -48,7 +48,7 @@
   } else {
     $headingText = NULL;
     $bodyText = $page->text();
-    $limit = NULL;
+    $limit = 9999999;
   }
 
 ?>

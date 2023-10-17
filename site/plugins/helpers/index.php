@@ -17,7 +17,8 @@ function dehash( $string ) {
 
 // remove opening and closing tags from kirbytext
 function ktStrip( $string ) {
-  return str::substr($string->value->kirbytext(), 3, -4);
+  return $string; // TODO: fix
+  // return str::substr($string->value->kirbytext(), 3, -4);
 }
 
 ?>
