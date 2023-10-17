@@ -20,9 +20,6 @@ snippet('global-body-open');
       snippet('contact-map');
     snippet('global-section-close');
 
-    // cta
-    // snippet('contact-cta');
-
   snippet('global-main-close');
 
   // footer
