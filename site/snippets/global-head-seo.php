@@ -28,7 +28,7 @@ if($page->description() != '') {
 if($page->description() != '') {
   $shareDescription = $page->description();
 } elseif($page->text() != '') {
-  $shareDescription = $page->text()->chopper(140);
+  $shareDescription = strip_tags($page->text()->chopper(140));
 } else { $shareDescription = NULL; }
 
 
