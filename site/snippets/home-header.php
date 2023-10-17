@@ -24,9 +24,9 @@ $i = 0;
     <?php foreach($slides as $slide):
       $i++;
     ?>
-      <img class="home-slideshow-img" <?php if($i > 1) { echo 'data-'; } ?>src="<?= $site->url() . '/content/home/' . $slide->slide() ?>" alt="" draggable="false">
+      <img class="home-slideshow-img" <?php if($i > 1) { echo 'data-'; } ?>src="<?= image($slide->slide())->url() ?>" alt="" draggable="false">
       <?php if($i > 1): ?><noscript>
-        <img class="home-slideshow-img" src="<?= $site->url() . '/content/home/' . $slide->slide() ?>" alt="" draggable="false">
+        <img class="home-slideshow-img" src="<?= image($slide->slide())->url() ?>" alt="" draggable="false">
       </noscript><?php endif ?>
     <?php endforeach ?>
   </div>
