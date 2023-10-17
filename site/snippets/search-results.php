@@ -23,7 +23,7 @@
                 <?= $result->title() ?>
               </a>
             </h3>
-            <p class="search-excerpt milli"><?php if ($result->description() != ''): echo $result->description(); else: echo /* TODO: replace with chopper excerpt($result->text()->kirbytext(), 500) */ $result->text()->kirbytext(); endif ?></p>
+            <p class="search-excerpt milli"><?php if ($result->description() != ''): echo $result->description(); else: echo $result->text()->kirbytext()->chopper(500); endif ?></p>
             <a class="search-more_link milli" href="<?= $result->url() ?>"><?= $result->uri() ?></a>
           </li>
           <?php endforeach ?>

@@ -24,8 +24,7 @@ if (isset($category) && $category == 'experts') {
 
     // get doctor credentials
     if ($doctor->credentials() != '') {
-      // TODO: replace with chopper $caption = $doctor->credentials()->excerpt(28, 'words');
-      $caption = $doctor->credentials();
+      $caption = $doctor->credentials()->chopper(140);
     } else {
       $caption = $doctor->parent()->testimonee() . ', Advance Medical';
     }
