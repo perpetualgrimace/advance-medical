@@ -23,10 +23,9 @@ if ($item->description() != '') {
 
   <a href="<?= $item->url() ?>" class="teaser-thumb" tabindex="-1">
     <img class="teaser-img" src="<?= $thumbImg ?>" alt="" draggable="false">
-  </a>
-
-  <div class="teaser-caption">
-
+  </a><!--
+  white space here messes up layout
+  --><div class="teaser-caption">
     <a href="<?= $item->url() ?>" class="teaser-title display gamma u-underline-off">
       <?= $item->title() ?>
     </a>
@@ -38,6 +37,5 @@ if ($item->description() != '') {
     <a href="<?= $item->url()?>" class="more-link teaser-more-link milli" tabindex="-1">
       Learn more &rsaquo;
     </a>
-
   </div>
 </li>
