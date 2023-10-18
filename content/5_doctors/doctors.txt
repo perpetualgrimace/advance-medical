@@ -13,22 +13,12 @@ Every Advance Medical case is directly managed by a Physician Case Manager, rath
 
 Hear our physicians describe our case process in their own words (link: testimonials text: here).
 
-<!--
-Hi. Do me a favor and please don't delete this.
-(doctor-list: experts)
--->
-
 
 ## Help with decisions
 
 ### Physician relationships save time and money
 
 Information on medical conditions, treatment plans, and navigating the healthcare system can all be confusing. Advance Medical helps provide clarity. Our Physician Case Managers serve as partners to patients in daily decision making, answering questions as they arise and providing timely, expert guidance on diagnoses and treatments.
-
-<!--
-Please don't delete this either.
-(doctor-list: physicians)
--->
 
 
 ## The power of expert connections

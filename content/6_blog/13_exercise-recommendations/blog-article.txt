@@ -2,7 +2,7 @@ Title: Exercise Recommendations
 
 ----
 
-Text: 
+Text:
 
 Nearly everyone has been encouraged, instructed, even “ordered” by the doctor to exercise. Whether it is for cardiac health, weight loss or general well being, the message has been clear, we all need to be exercising on a regular basis. But what does this mean for the individual patient? Knowing exactly where to start and specifically what needs to be done can be challenging. Fortunately, there are clear, research-backed guidelines on the quantity, type and quality of exercise we should be getting.
 
@@ -41,7 +41,7 @@ Date: 2017-02-01
 
 ----
 
-Description: 
+Description:
 
 ----
 
@@ -49,11 +49,11 @@ Thumbimg: pexels-photo.jpg
 
 ----
 
-Heroimg: 
+Heroimg:
 
 ----
 
-Ctaheading: More from (page: category):
+Ctaheading: More like this:
 
 ----
 

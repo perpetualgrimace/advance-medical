@@ -92,7 +92,7 @@ Release:
 
 ----
 
-ctaHeading: More in (page: category):
+ctaHeading: More like this:
 
 ----
 

@@ -2,8 +2,6 @@
 
 This site was build for Advance Medical by [James Ferrell](http://jamesferrell.me) at [Berman Advertising](http://bermanadvertising.com). We hope you love working with it.
 
-
-
 ## Links for content creators:
 
 ### Admin panel access
@@ -14,8 +12,6 @@ Please Contact Berman for the username and password.
 ### Formatting content
 
 [Kirbytext reference](https://getkirby.com/docs/content/text)
-
-
 
 ## Installation instructions for developers:
 
@@ -28,8 +24,6 @@ The Advance Medical site was built with Kirby CMS, Sass, Gulp, and minimal Javas
 5. <code>cd advance-medical.com</code> into the newly cloned folder and use <code>npm install</code> to install all of the Gulp dependencies.
 6. Run <code>Gulp</code>.
 
-
-
 ## Kirby CMS
 
 ### A quick rundown of Kirby file and folder organization, names, and concepts
@@ -40,18 +34,18 @@ There are 4 Kirby-related folders in the root directory:
 2. Panel. Makes the admin panel useable. The Kirby panel isn't required to use Kirby, but it is a big part of the draw.
 3. Content. Contains folders with text file. The name and number of the folder relates to its page name and order. The text files are named by corresponding template. They are written in Kirbytext, which is an extended version of Markdown, and this is where the data and text for each page lives. Folders (pages) may contain folders (sub-pages) or files, as well. Meaning content can be version controlled, easily edited, and easily moved from one server to another. Kirby is kind of the best. Moving on!
 4. Site. Contains the following:
-  - Accounts (optional). User accounts for accessing the panel.
-  - Blueprints (optional). YAML files that generate panel fields. Named by template.
-  - Config. Global site options like the license field, caching, debugging, setting up redirects and vanity URLs, etc. Different servers can have unique config files, too.
-  - Controllers (optional). Contains logic for corresponding templates.
-  - Fields (optional). Custom fields to be used in admin panel blueprints.
-  - Languages (optional). Enable different languages for custom translations.
-  - Patterns (custom plugin). Reusable components with corresponding css and logic and a nice pattern lab interface. More on this under SCSS partials.
-  - Plugins (optional). Should probably be self-explanatory.
-  - Snippets. Reusable chunks of code. Basically, they're includes.
-  - Tags (optional). Custom tags to be used in content files.
-  - Templates. Define custom logic and layout for different pages. Corresponds to content file name.
 
+- Accounts (optional). User accounts for accessing the panel.
+- Blueprints (optional). YAML files that generate panel fields. Named by template.
+- Config. Global site options like the license field, caching, debugging, setting up redirects and vanity URLs, etc. Different servers can have unique config files, too.
+- Controllers (optional). Contains logic for corresponding templates.
+- Fields (optional). Custom fields to be used in admin panel blueprints.
+- Languages (optional). Enable different languages for custom translations.
+- Patterns (custom plugin). Reusable components with corresponding css and logic and a nice pattern lab interface. More on this under SCSS partials.
+- Plugins (optional). Should probably be self-explanatory.
+- Snippets. Reusable chunks of code. Basically, they're includes.
+- Tags (optional). Custom tags to be used in content files.
+- Templates. Define custom logic and layout for different pages. Corresponds to content file name.
 
 ### My approach to building sites with Kirby
 
@@ -97,8 +91,6 @@ Robust form handling. Because I'm not so good with the back-end stuff.
 
 [https://github.com/mzur/kirby-uniform](https://github.com/mzur/kirby-uniform)
 
-
-
 ## Gulp
 
 I'm using Gulp to do a few things:
@@ -109,11 +101,9 @@ I'm using Gulp to do a few things:
 
 The default task wipes and rebuilds the build folder (CSS and JS files), starts up the BrowserSync server, and watches the aforementioned files.
 
-So far the gulp file is working as intended, and when it runs across an error, it sends an alert (via beepbeep), logs the error in the terminal, and keeps on going (via <code>this.emit('end')</code>). *Side note: why was that so hard to figure out?*
+So far the gulp file is working as intended, and when it runs across an error, it sends an alert (via beepbeep), logs the error in the terminal, and keeps on going (via <code>this.emit('end')</code>). _Side note: why was that so hard to figure out?_
 
 I've also set up some paths as variables just below the module list in case I decide to restructure the way I organize my files in the future.
-
-
 
 ## CSS and Sass
 
@@ -158,12 +148,14 @@ I wanted to build the type of grid that makes sense as a developer (by padding a
 It scales up the <code>html font-size</code> from 100% (16px) to 112.5% (18px) to 125% (20px) depending on viewport width, which scales the entire site if it's built with REM units.
 
 All classes are namespaced with <code>g-</code> (for grid):
+
 - <code>.g-container</code> sets a max width and horizontally centers itself
 - <code>.g-columns</code> applies a clearfix and is mostly required for nesting, context, and grid modifications (more on that below)
 - <code>.g-col</code> applies padding, removes top margin, and sets the default and max width to 100%.
 - <code>.g-[1-12]</code> sets the corresponding column span width on larger viewports
 
 Also, there are a few modifying classes that can be added to the <code>.g-columns</code> container in order to affect its children:
+
 - <code>.g-doubling</code> doubles the <code>.g-col</code> span width at intermediate viewport sizes
 - <code>.g-constant</code> maintains the specified .g-col span across all viewports
 - <code>.g-compact</code> reduces <code>.g-col</code> gutter size (and compensates for nested <code>.g-column</code> with negative margin)
@@ -188,15 +180,17 @@ Global site layout.
 
 1. Layout. Globalest of global layout. Like, setting the body display to flex in order to easily make the footer sticky, and specifying padding for sections. There would be much more here if I weren't leveraging jf-grids.
 2. Nav. Top site navigation bar. There is a lot going on in this one:
-  - Nav container, fixed in viewports where that makes sense.
-  - Some global style applied to navbar children
-  - The logo
-  - The main navigation list of links
-  - Separate style for main navigation on smaller viewports
-  - Dropdown menu and states
-  - The hamburger button and states
-  - Social icons (commented out)
-  - Skip link
+
+- Nav container, fixed in viewports where that makes sense.
+- Some global style applied to navbar children
+- The logo
+- The main navigation list of links
+- Separate style for main navigation on smaller viewports
+- Dropdown menu and states
+- The hamburger button and states
+- Social icons (commented out)
+- Skip link
+
 3. Header. I usually default to a big title with an image behind, plus breadcrumbs when that makes sense. There are usually some style variants for the home page, and those go here as well.
 4. Footer. What goes in here varies depending on the site. Usually a sitemap (which usually requires the most style), social media links, and a copyright disclaimer.
 
@@ -270,8 +264,6 @@ Finally, when modifying classes, I will add a modifier namespace (namespace name
 
 <code>.video-card-meta (p.card-meta)</code>
 
-
-
 ## Javascript
 
 I use jQuery and generally avoid using javascript. Sorry if that makes you sad.
@@ -282,6 +274,8 @@ At some point in the near future I plan on looking into module loading, but for 
 
 1. Vendor. It's just jQuery for now.
 2. Global. Contains the following:
-  - Nav. Make the hamburger menu toggle work, makes dropdown menus accessible via keyboard.
-  - Scroll. Just a smooth scroll script for now. Depends on an older version on jQuery, which is an issue I will get around to fixing at some point.
-3. Components. This used to be pages, but I renamed it components. For now, there's only the  contact-form validation, which is in need of some love.
+
+- Nav. Make the hamburger menu toggle work, makes dropdown menus accessible via keyboard.
+- Scroll. Just a smooth scroll script for now. Depends on an older version on jQuery, which is an issue I will get around to fixing at some point.
+
+3. Components. This used to be pages, but I renamed it components. For now, there's only the contact-form validation, which is in need of some love.
