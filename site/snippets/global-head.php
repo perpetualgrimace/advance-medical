@@ -20,13 +20,7 @@
   snippet('global-head-icons');
 
   // if on localhost, use the dev stylesheet
-  $hostName = gethostname();
-
-  if (strpos($hostName, '.local') !== false) {
-    echo css('assets/build/css/main.dev.css');
-  } else {
-    echo css('assets/build/css/main.production.css');
-  };
+  echo css('assets/build/css/main.min.css');
 
   ?>
 
