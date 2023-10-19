@@ -4,7 +4,7 @@
     <a href="#all" class="button is-selected" data-type-trigger><?= $page->allPosts() ?></a>
     <a href="#blog-article" class="button" data-type-trigger><?php snippet('icon-article-white.svg') ?> <?= $page->articlePost() ?></a>
     <a href="#blog-video" class="button" data-type-trigger><?php snippet('icon-video-white.svg') ?> <?= $page->videoPost() ?></a>
-    <a href="#blog-release" class="button" data-type-trigger><?php snippet('icon-release-white.svg') ?> <?= $page->releasePost() ?></a>
+    <?php /* <a href="#blog-release" class="button" data-type-trigger><?php snippet('icon-release-white.svg') ?> <?= $page->releasePost() ?></a> */ ?>
   </div>
 </div>
 
