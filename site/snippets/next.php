@@ -2,13 +2,13 @@
 
 // the next page will be the previous article,
 // unless there are no older articles, in which case it will be the latest article
-if ($page->hasNextVisible()) {
-  $next = $page->nextVisible();
+if ($page->hasNextListed()) {
+  $next = $page->nextListed();
 } else {
   $next = $page->siblings()->listed()->first();
 }
-if ($page->hasPrevVisible()) {
-  $prev = $page->prevVisible();
+if ($page->hasPrevListed()) {
+  $prev = $page->prevListed();
 } else {
   $prev = $page->siblings()->listed()->last();
 }
