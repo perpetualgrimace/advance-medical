@@ -1,0 +1,33 @@
+main * + * {
+  margin-top: 0.625em;
+}
+
+.display + .button {
+  margin-top: 1.5em;
+}
+
+// Ugly selectors to achieve nice vertical rhythm
+// with Markdown-generated content. I'm sorry, Heydon.
+.content {
+  p +,
+  ul + {
+    p, h2, h3, h4, h5, h6 {
+      margin-top: 1.5em;
+    }
+  }
+}
+
+
+// assume figure.video is in a markdown section, give it some space
+* + figure.video {
+	margin-top: 2rem;
+}
+
+
+// add anchor link offset to any element with an id
+main [id]:before {
+  @include pseudo;
+  visibility: hidden;
+  margin-top: -($gutter * 2);
+  height: $gutter * 2;
+}

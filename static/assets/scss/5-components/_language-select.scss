@@ -1,0 +1,293 @@
+///////////////////////////////////////////////
+// model
+///////////////////////////////////////////////
+
+// div.language-container
+//   img.language-globe-img
+//   a.language-selected
+//     img.language-dropdown-img
+//   ul.language-list
+//     li.language-item
+//       a.language-link
+
+
+///////////////////////////////////////////////
+// positioning
+///////////////////////////////////////////////
+
+// vertical alignment
+.language-globe-img {
+  float: left;
+  width: 0.85rem;
+  height: 0.85rem;
+  top: 0.1rem; // fudged
+}
+
+.language-dropdown-img {
+  position: absolute;
+  width: 0.45rem;
+  height: 0.35rem;
+  top: 0.625em;
+}
+
+// selected language
+.language-selected {
+  right: 0;
+  margin-left: 0.25rem;
+  padding-right: 0.625rem;
+  padding-bottom: $border-width-thin;
+  border-bottom: $border-width-thin solid rgba($white, 0.5);
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+
+  &:hover, &:focus {
+    border-bottom-color: $white;
+  }
+  &:active {
+    background: none !important; // override global :focus style
+  }
+  &.is-active .language-dropdown-img {
+    transform: rotateZ(180deg) translateY(0.1em);
+  }
+}
+
+// set width on larger screens
+@media (min-width: $s) {
+  .language-globe-img {
+    display: inline-block;
+    vertical-align: top;
+  }
+  .language-selected {
+    display: inline-block;
+    width: $logo-width - 0.85rem - 0.25rem; // account for globe icon and margin
+    vertical-align: top;
+  }
+}
+
+// list initial state
+.language-list {
+  @include dropdown-hidden;
+  width: $logo-width - 0.85rem - 0.25rem; // account for globe icon and margin
+  top: 1.05rem; // fallback
+  top: calc(1rem + #{$border-width-thin});
+  right: 0;
+  background: $white;
+  transform: translateY(-$border-width-thin);
+}
+
+// list toggle
+.language-list:target,
+.language-list.is-active {
+  @include dropdown-visible;
+  overflow: visible;
+  z-index: 1 !important;
+  transform: none;
+}
+
+.language-link {
+  display: block;
+  padding: 0.125rem 0.5rem 0.325rem 0.5rem;
+  color: $brand-color;
+  background: $light-white;
+
+  &:hover, &:focus {
+    @include box-shadow;
+    transform: scale(1.015);
+    color: $light-brand-color;
+    background: $white !important; // override base nav style
+  }
+}
+
+
+///////////////////////////////////////////////
+// in main nav
+///////////////////////////////////////////////
+
+.language-container {
+  position: absolute;
+  top: 0.9rem;
+  right: $gutter;
+  // height: 1.2rem;
+  // overflow: hidden;
+
+  // account for truncated language
+  @media (max-width: $xs - 0.001) {
+    .language-selected {
+      border-bottom: none;
+    }
+    .language-globe-img {
+      top: 0.15rem; // still fudged
+    }
+    .language-list {
+      top: 1.5rem;
+    }
+  }
+
+  // offset globe on smaller screens
+  // TODO: investigate
+  @media (max-width: $s - 0.001) {
+    .language-globe-img {
+      left: -0.15rem;
+    }
+  }
+
+
+}
+
+
+///////////////////////////////////////////////
+// in footer subnav
+///////////////////////////////////////////////
+/*
+.footer-subnav-languages {
+  top: 0.25rem;
+
+  .language-globe-img {
+    top: 0.45em;
+  }
+
+  .language-selected {
+    @include display-font;
+    font-size: $milli;
+    text-align: left;
+    text-decoration: none;
+
+    &:hover .language-dropdown-img,
+    &:focus .language-dropdown-img {
+      transform: rotateZ(180deg);
+    }
+  }
+}
+*/
+
+
+///////////////////////////////////////////////
+// google translate
+///////////////////////////////////////////////
+
+// div#google_translate_element
+//   div.skiptranslate.goog-te-gadget
+//     div#:0.targetLanguage
+//       select.goog-te-combo
+//         options
+//     [text]
+//     span[style="white-space:nowrap"]
+
+
+// select
+.google-language-container {
+  display: inline-block;
+  right: 0 !important;
+  padding-right: 2rem;
+  height: 1.25rem;
+  overflow: hidden;
+
+  @media (min-width: $l) {
+    margin: 2px 0.075em 0;
+  }
+
+  // icon
+  &:after {
+    @include pseudo;
+    @include svg('select', 'img/icons/');
+    background-size: rem(15) rem(7);
+    position: absolute;
+    width: rem(15);
+    height: rem(7);
+    right: 0.875em;
+    top: 1em;
+    pointer-events: none;
+  }
+
+  // unstyle select element
+  select {
+    color: $white;
+    background: transparent;
+    border: none;
+    padding: 0.25em 2.25em 0.5em 1em;
+    /* autoprefixer off */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+    /* autoprefixer on */
+
+    // black text in select menu; windows bugfix
+    & > option {
+      color: $black;
+    }
+
+    // hide redundant IE dropdown icon; IE bugfix
+    &::-ms-expand {
+      display: none;
+    }
+  }
+}
+
+.goog-te-combo {
+  @include body-font;
+  @include font-smoothing;
+  margin: 0 0 0 0.5em !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+  padding-bottom: $border-width-thin;
+  border-bottom: $border-width-thin solid rgba($white, 0.5) !important;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  opacity: 0.8;
+  min-width: 7rem;
+
+  &:hover, &:focus {
+    border-bottom-color: $white !important;
+    opacity: 1;
+  }
+}
+
+.google-language-globe-img {
+  left: 0.125rem !important;
+}
+
+.google-language-container:after {
+  display: none;
+}
+.google-language-dropdown-img {
+  @extend .nav-link;
+  margin-top: -0.05rem;
+  right: 1.125rem; // fudged 🤷‍
+}
+
+// provide alternate position fudging for IE
+@media all and (-ms-high-contrast:none) {
+  // IE 11
+  *::-ms-backdrop, .google-language-dropdown-img {
+    right: 2rem; // still fudged 🤷‍
+  }
+}
+
+
+// small screens
+@media (max-width: $s - 0.001) {
+  .google-language-container {
+    width: 3rem;
+    right: 0.75rem !important;
+  }
+  .goog-te-combo {
+    opacity: 0;
+    max-width: 2rem;
+    margin: 0 !important;
+
+    &:hover, &:focus {
+      border-bottom-color: $white !important;
+      opacity: 0;
+    }
+  }
+  .google-language-dropdown-img {
+    right: 1.25rem; // fudged 🤷‍
+  }
+  .google-language-globe-img {
+    left: 2rem !important;
+    opacity: 1 !important;
+  }
+}

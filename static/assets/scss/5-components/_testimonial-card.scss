@@ -1,0 +1,95 @@
+.testimonial-card-list {
+  column-width: 16rem;
+  margin-top: 2px; // show top border; IE bugfix
+  break-inside: avoid;
+}
+
+.testimonial-card-container {
+  width: 100%;
+  padding: $grid-padding;
+  display: inline-block; // fix white space above some columns in chrome
+  border-radius: $radius;
+  background: $light-white;
+  z-index: 1;
+  transform: translateZ(0); // address disappearing top 2nd column bug in chrome
+}
+
+.testimonial-card-text {
+  font-size: $epsilon;
+
+  &:first-letter {
+    margin-left: -0.25em;
+  }
+}
+
+.testimonial-card-credentials {
+  display: block;
+  font-size: $milli;
+  opacity: 0.6666;
+}
+
+// avatar
+.testimonial-card-img {
+  display: block;
+  margin: 0 auto 1rem auto;
+  width: rem(100);
+  height: rem(100);
+  max-width: 100%;
+  background: $gray; // before images load
+  border-radius: 50%;
+
+  @media (max-width: $m - 0.001) {
+    height: auto;
+  }
+}
+
+
+////////////////////////////////
+// categories
+////////////////////////////////
+
+.testimonial-card-container {
+  // participant
+  &[data-category="participant"] {
+    @include testimonial-gradient($participant-color);
+    &.is-featured {
+      @include testimonial-featured-gradient($participant-color);
+    }
+  }
+  // client
+  &[data-category="client"] {
+    @include testimonial-gradient($client-color);
+    &.is-featured {
+      @include testimonial-featured-gradient($client-color);
+    }
+  }
+  // expert
+  &[data-category="expert"] {
+    @include testimonial-gradient($expert-color);
+    &.is-featured {
+      @include testimonial-featured-gradient($expert-color);
+    }
+  }
+  // physician
+  &[data-category="physician"] {
+    @include testimonial-gradient($physician-color);
+    &.is-featured {
+      @include testimonial-featured-gradient($physician-color);
+    }
+  }
+}
+
+
+// featured
+.testimonial-card-container.is-featured {
+  color: $white;
+
+  .testimonial-card-text {
+    font-size: $delta;
+  }
+
+  .testimonial-card-img {
+    width: rem(150);
+    height: rem(150);
+  }
+}

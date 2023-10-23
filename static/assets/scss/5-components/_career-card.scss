@@ -1,0 +1,43 @@
+////////////////////////////////
+// career card
+////////////////////////////////
+
+.career-card-caption {
+  min-height: 4rem;
+}
+.card-meta-item {
+  &:not(:last-of-type) {
+    margin-right: 1em;
+  }
+}
+
+.career-card-icon {
+  width: 0.85rem;
+  height: 0.85rem;
+  display: inline-block;
+  vertical-align: middle;
+  top: -0.1em;
+}
+
+.career-card-icon-location {
+  left: -0.05em;
+}
+
+.career-card-icon-hours {
+  margin-right: 0.3em;
+}
+
+.career-card-title {
+  padding-left: 0;
+}
+
+
+// focus
+.career-card-title:focus {
+  background: none;
+}
+
+.career-card-inner.is-focused { // class added via js
+  @include box-shadow-lg;
+  transform: translateY(-1px);
+}

@@ -1,0 +1,14 @@
+.contact-cta-link {
+  &:hover, &:focus, &:active {
+    .cta-mail-icon path {
+      fill: $light-brand-color;
+    }
+  }
+}
+
+.cta-mail-icon {
+  width: rem(27);
+  height: rem(21);
+  vertical-align: middle;
+  margin-right: 0.25rem;
+}

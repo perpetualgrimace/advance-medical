@@ -1,0 +1,89 @@
+////////////////////////////////
+// heatmap key
+////////////////////////////////
+
+// container positioning
+.heatmap-key {
+  @media (min-width: $m) {
+    position: absolute;
+    top: 10rem; // fudged, couldn't get other methods of vertical centering to work 🤷‍
+  }
+}
+
+.heatmap-key .heatmap-headline {
+  font-size: $gamma;
+}
+
+
+////////////////////////////////
+// heatmap map
+////////////////////////////////
+
+// limit svg height on smaller screens so that it scales with the viewBox
+// NOTE: must be scoped to smaller screens, or else IE bug on larger screens
+@media (max-width: $m - 0.001) {
+  .heatmap-svg {
+    height: 100%;
+  }
+}
+
+
+
+////////////////////////////////
+// heatmap list
+////////////////////////////////
+
+// list style
+/*
+.heatmap-list {
+  display: table;
+  table-layout: fixed;
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 20rem;
+  border-radius: $radius;
+  overflow: hidden;
+}
+
+
+// list item style
+.heatmap-item {
+  display: table-cell;
+  text-align: center;
+}
+
+
+// link style
+.heatmap-item {
+  line-height: 1.5rem;
+  padding-bottom: 0.15em;
+  width: 100%;
+}
+
+
+// individual colors
+.heatmap-item-0 {
+  background: $light-white;
+  color: $black;
+}
+
+.heatmap-item-1-50 {
+  background: $light-2;
+  color: $black;
+}
+
+.heatmap-item-51-100 {
+  background: $dark-1;
+  color: $light-white;
+}
+
+.heatmap-item-101-500 {
+  background: $secondary-color;
+  color: $light-white;
+}
+
+.heatmap-item-501-plus {
+  background: $brand-color;
+  color: $light-white;
+}
+*/

@@ -1,0 +1,73 @@
+////////////////////////////////
+// container
+////////////////////////////////
+
+.sidebar-nav {
+  background: $brand-color;
+  border-radius: $radius-small;
+
+  @media (min-width: $m) {
+    top: 0.325em;
+  }
+}
+
+////////////////////////////////
+// parent page
+////////////////////////////////
+
+.sidebar-title-link.is-active-pg {
+  @include body-font;
+  opacity: 1;
+
+  &:before {
+    @include sidebar-triangle;
+    top: 0.225em;
+  }
+}
+
+////////////////////////////////
+// main items
+////////////////////////////////
+
+.sidebar-nav-item + .sidebar-nav-item {
+  margin-top: 0.45em; // fudged
+}
+
+
+////////////////////////////////
+// nested items
+////////////////////////////////
+
+.nested-sidebar-nav-list,
+.nested-sidebar-nav-item {
+  margin-top: 0.25em;
+}
+
+.nested-sidebar-nav-item {
+  padding-left: 0.5rem;
+}
+
+// triangular active page pointer
+.sidebar-nav-link.is-active-pg,
+.nested-sidebar-nav-link.is-active-pg {
+  @include body-bold-font;
+
+  &:before {
+    @include sidebar-triangle;
+  }
+}
+// offset padding (nested)
+/*
+.nested-sidebar-nav-link.is-active-pg:before {
+  left: -($gutter * 1.5);
+}
+*/
+
+// cheat expertise on demand title so it breaks nicely
+body[class*='service'],
+body.enterprise,
+body.doctors {
+  .sidebar-title {
+    max-width: 8em;
+  }
+}

@@ -1,0 +1,22 @@
+// grid classes are pretty specific, apparently
+.process-item .g-col.process-caption {
+  padding-left: 1rem;
+}
+// maintain SVG proportions in IE
+@media all and (-ms-high-contrast:none) {
+  // IE 11
+  *::-ms-backdrop, .process-item .process-image {
+    height: 10%; // fudged 🤷‍
+  }
+}
+
+/* staggered; relies on a different source order
+.process-item:nth-of-type(odd) .g-col.process-caption {
+  padding-left: 1rem;
+  float: right;
+}
+
+.process-item:nth-of-type(even) .g-col.process-caption {
+  padding-right: 1rem;
+}
+*/

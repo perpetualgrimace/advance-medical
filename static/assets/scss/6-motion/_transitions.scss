@@ -1,0 +1,81 @@
+// interactive stuff
+a, label, input, textarea, button,
+[class*=button], button:after,
+.career-card-inner,
+.goog-te-combo {
+  /* autoprefixer: off */
+  transition:
+    color $timing,
+    opacity $timing,
+    background $timing,
+    border $timing,
+    transform $timing,
+    box-shadow $timing;
+}
+
+// images
+img, [class*='img'] {
+  /* autoprefixer: off */
+  transition:
+    opacity $timing,
+    transform $timing,
+    box-shadow $timing,
+    mix-blend-mode $timing;
+}
+
+// svgs
+svg * {
+  /* autoprefixer: off */
+  transition:
+    fill $timing,
+    stroke $timing,
+    opacity $timing;
+}
+
+// nav logo
+.nav-logo {
+  /* autoprefixer: off */
+  transition:
+    opacity $timing,
+    background $timing;
+}
+
+// nav list smooth expand / collapse
+.dropdown,
+.nav-list {
+  /* autoprefixer: off */
+  transition:
+    opacity $timing-quick,
+    transform $timing-quick;
+}
+
+// language list
+.language-list {
+  /* autoprefixer: off */
+  transition: opacity $timing-quick;
+}
+
+// hamburger
+.hamburger,
+.hamburger-bun {
+  /* autoprefixer: off */
+  transition: transform $timing;
+}
+
+// select
+.select-container {
+  transition: box-shadow $timing;
+}
+
+// *-thumb after
+[class*="thumb"]:after {
+  transition:
+    opacity $timing,
+    background $timing;
+}
+
+.home-slideshow-img {
+  transition:
+    opacity 2.5s $easing,
+    transform 8s ease-out;
+}

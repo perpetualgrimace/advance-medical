@@ -1,0 +1,244 @@
+////////////////////////////////
+// standard card
+////////////////////////////////
+
+@media (max-width: $m - 0.001) {
+  .card-container + .card-container {
+    padding-top: 0;
+  }
+}
+
+.card-inner {
+  @include box-shadow;
+  border-radius: $radius-small;
+  overflow: hidden;
+  background: $white;
+  border-bottom: $border-width solid $brand-color;
+  min-height: rem(100);
+}
+
+// thumbnail image size
+.card-thumb {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: rem(140);
+  height: 100%;
+  display: block; // otherwise width & height are ignored
+  // padding-top: #{($thumb-height / $thumb-width) * 100}#{%}; // set aspect ratio
+  overflow: hidden;
+  background: $light-1;
+
+  // color overlay for hover effects
+  &:after {
+    @include pseudo;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    opacity: 0;
+    background-color: $brand-color;
+    mix-blend-mode: color;
+  }
+
+  // hovering image triggers adjacent title
+  &:hover + .card-caption > .card-title {
+    color: $light-brand-color;
+  }
+}
+
+// image size
+.card-img {
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+// reveal overlay on hover / focus
+.card-thumb:hover,
+.card-thumb:active,
+.card-inner.is-focused .card-thumb {
+  // added via js
+  &:after {
+    opacity: 0.6666666;
+  }
+}
+
+// caption positioning
+.card-caption {
+  padding: 0 1rem 0.825rem 1rem;
+
+  @media (min-width: $xs) {
+    min-height: 5rem;
+  }
+}
+
+// cards with thumbnails
+.card-thumb + .card-caption {
+  padding-right: rem(160);
+
+  .card-more-link {
+    padding-right: rem(140);
+  }
+}
+
+// card title
+.card-title {
+  padding-top: 0.75rem;
+  padding-left: 1.25rem;
+  display: block;
+  text-decoration: none;
+}
+
+.card-icon {
+  width: rem(17);
+  height: rem(17);
+  position: absolute;
+  margin-top: 0.125em;
+  left: 0;
+}
+
+.card-link {
+  @include body-font;
+}
+
+// position meta and more link on larger screens
+@media (min-width: $xs) {
+  .card-meta,
+  .card-more-link {
+    position: absolute;
+    bottom: 0.625rem;
+  }
+
+  .card-more-link {
+    right: $gutter;
+  }
+}
+
+// hide more link on smaller screens
+@media (max-width: $xs - 0.001) {
+  .card-more-link {
+    display: none;
+  }
+}
+
+////////////////////////////////
+// states
+////////////////////////////////
+
+[data-categorized].is-hidden,
+[data-category].is-hidden {
+  display: none;
+}
+
+.card-list.is-sorted {
+  .card-container {
+    clear: none !important;
+    float: left !important;
+  }
+}
+
+////////////////////////////////
+// article card
+////////////////////////////////
+
+.blog-article-card-inner {
+  border-bottom-color: $article-color;
+}
+.blog-article-card-title,
+.blog-article-card-link {
+  &:hover,
+  &:focus {
+    color: $article-color;
+  }
+}
+
+.blog-article-card-thumb:hover + .card-caption > .card-title {
+  color: $article-color;
+}
+.blog-article-card-thumb:after {
+  background-color: $article-color;
+}
+
+////////////////////////////////
+// video card
+////////////////////////////////
+
+.blog-video-card-inner {
+  border-bottom-color: $video-color;
+}
+.blog-video-card-title,
+.blog-video-card-link {
+  &:hover,
+  &:focus {
+    color: $video-color;
+  }
+}
+.blog-video-card-thumb:hover + .card-caption > .card-title {
+  color: $video-color;
+}
+.blog-video-card-thumb:after {
+  background-color: $video-color;
+}
+
+// ridiculous classname is ridiculous
+.blog-video-card-thumb-icon {
+  @include absolute-center;
+  position: absolute;
+  z-index: 1;
+  width: rem(40);
+  opacity: 0.666;
+}
+
+// hover
+.blog-video-card-thumb:hover .blog-video-card-thumb-icon {
+  opacity: 1;
+}
+
+////////////////////////////////
+// press release card
+////////////////////////////////
+
+.blog-release-card-inner {
+  border-bottom-color: $release-color;
+}
+.blog-release-card-title,
+.blog-release-card-link {
+  &:hover,
+  &:focus {
+    color: $release-color;
+  }
+}
+/*
+.blog-release-card-thumb:hover + .card-caption > .card-title {
+  color: $release-color;
+}
+.blog-release-card-thumb:after {
+  background-color: $release-color;
+}
+*/
+
+////////////////////////////////
+// layout tweaks
+////////////////////////////////
+
+.card-container.g-4 {
+  // two columns
+  @media screen and (min-width: $xs) and (max-width: $m - 0.001) {
+    width: 50%;
+
+    &:nth-of-type(2n + 1) {
+      clear: both;
+    }
+  }
+  // clear those floats on bigger screens
+  @media screen and (min-width: $m) {
+    &:nth-of-type(3n + 1) {
+      clear: both;
+    }
+  }
+}

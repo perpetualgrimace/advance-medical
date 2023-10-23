@@ -1,0 +1,140 @@
+////////////////////////////////
+// footer layout
+////////////////////////////////
+
+.footer {
+  padding-bottom: 0.01rem; // extend background to bottom of page; IE fix
+
+  &:before {
+    @include network-graphic;
+    bottom: 0;
+    transform: rotateZ(180deg);
+
+    // tame the opacity on smaller screens
+    @media (max-width: $m - 0.001) {
+      opacity: 0.15;
+    }
+  }
+}
+
+
+////////////////////////////////
+// follow heading
+////////////////////////////////
+
+.footer-heading {
+  @include body-font;
+}
+
+
+////////////////////////////////
+// follow links
+////////////////////////////////
+
+// footer links
+.footer-link {
+  padding: 0.5rem;
+
+  &[href="#languages"]:active,
+  &[href="#languages"]:focus {
+    cursor: n-resize;
+  }
+}
+
+.footer-follow-item {
+  & + & {
+    margin-left: $gutter;
+  }
+}
+
+.footer-follow-img {
+  width: rem(19);
+  height: rem(19);
+  top: -0.1rem;
+  margin-right: 0.25rem;
+}
+
+
+////////////////////////////////
+// footer nav
+////////////////////////////////
+
+// switch to inline list style when the space is available
+.footer-nav-item {
+  @media (min-width: $m) {
+    display: inline-block;
+  }
+}
+
+// break tag
+.footer-nav-break {
+
+  @media (max-width: $m - 0.001) {
+    display: none !important;
+  }
+
+  & + .footer-nav-item {
+    margin-top: 0 !important;
+  }
+}
+
+
+////////////////////////////////
+// subnav
+////////////////////////////////
+
+.footer-subnav-item {
+  display: inline-block;
+
+  & + &:before {
+    @include pseudo;
+    height: $milli;
+    top: 0.75rem;
+    width: $border-width-thin;
+    background: $white;
+    position: absolute;
+  }
+}
+
+.footer-subnav-link {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/*
+.footer-subnav-globe {
+  width: 0.85rem;
+  height: 0.85rem;
+  display: inline-block;
+  vertical-align: middle;
+  top: -0.15em;
+  margin-right: 0.25em;
+}
+*/
+
+
+////////////////////////////////
+// copyright
+////////////////////////////////
+
+.footer-copyright-text {
+  @include display-font;
+}
+
+
+////////////////////////////////
+// smaller screens
+////////////////////////////////
+
+@media (max-width: $m - 0.001) {
+
+  .footer-nav-link {
+    display: block;
+    padding-left: 0;
+  }
+
+  .footer-nav-item + .footer-nav-item,
+  .footer-nav-break + .footer-nav-item {
+    border-top: 1px solid rgba($white, 0.5);
+  }
+}
