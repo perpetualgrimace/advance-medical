@@ -5,8 +5,8 @@ if (isset($filename)) { $filename = $filename; } else { $filename = NULL; }
 if (isset($extension)) { $extension = $extension; } else { $extension = 'png'; }
 if (isset($baseUrl)) { $baseUrl = $baseUrl; } else { $baseUrl = $page->url() . '/'; }
 
-$image1x = '/' . $filename . '.' .  $extension;
-$image2x = '/' . $filename . '@2x.' .  $extension;
+$image1x = $baseUrl . $filename . '.' .  $extension;
+$image2x = $baseUrl . $filename . '@2x.' .  $extension;
 
 ?>
 
