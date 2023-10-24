@@ -8,7 +8,7 @@
       <li class="contact-info-item">
         <?php snippet('icon-location-dark.svg') ?>
         <?php if($country != 'China'): ?>
-        <a class="contact-info-link milli" href="http://maps.google.com/?q=<?= $address1 . ' ' . $address2 . ' ' . $country ?>" itemprop="streetAddress"><?= $address1 . ' <br>' . $address2 ?></a>
+        <a class="contact-info-link milli" href="https://maps.google.com/?q=<?= $address1 . ' ' . $address2 . ' ' . $country ?>" itemprop="streetAddress"><?= $address1 . ' <br>' . $address2 ?></a>
         <?php else: ?>
         <p class="contact-info-link milli" itemprop="streetAddress"><?= $address1 . ' <br>' . $address2 ?></p>
         <?php endif ?>

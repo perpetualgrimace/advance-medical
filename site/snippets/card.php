@@ -20,7 +20,7 @@
       $thumbImg = $item->image($item->thumbImg())->url();
     // generated youtube thumbnail
     } elseif ($item->youtubeId() != '') {
-      $thumbImg = 'http://img.youtube.com/vi/' . $item->youtubeId() . '/mqdefault.jpg';
+      $thumbImg = 'https://img.youtube.com/vi/' . $item->youtubeId() . '/mqdefault.jpg';
     // fallback image
     } else {
       $thumbImg = $placeholderUrl;
