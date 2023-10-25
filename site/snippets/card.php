@@ -10,7 +10,7 @@
   // get thumbnail image
   $blog = $pages->find('blog');
   $placeholder = $blog->placeholderImg();
-  $placeholderUrl = $site->url() . '/blog/' . $placeholder;
+  $placeholderUrl = '/media/pages/blog/' . $placeholder;
 
   $iconFilename = $contentType;
 
