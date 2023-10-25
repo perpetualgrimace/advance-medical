@@ -18,7 +18,7 @@
   // typekit
   (function(d) {
     var config = {
-      kitId: 'hza1dpr',
+      kitId: 'brc1jar',
       scriptTimeout: 3000,
       async: true
     },
